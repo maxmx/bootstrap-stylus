@@ -283,15 +283,15 @@ transition-delay(transition-delay) {
 
 // Transformations
 rotate(degrees) {
-  vendor('transform', s("rotate(%s)", $degrees))
+  vendor('transform', s("rotate(%s)", degrees))
 }
 
 scale(ratio) {
-  vendor('transform', s("scale(%s)", $ratio))
+  vendor('transform', s("scale(%s)", ratio))
 }
 
 translate(x, y) {
-  vendor('transform', s("translate(%s, %s)", $x, $y))
+  vendor('transform', s("translate(%s, %s)", x, y))
 }
 
 skew(x, y) {
@@ -299,7 +299,7 @@ skew(x, y) {
   -webkit-backface-visibility: hidden; // See https://github.com/twitter/bootstrap/issues/5319
 }
 translate3d(x, y, z) {
-  vendor('transform', s("translate(%s, %s, %s)", $x, $y, $z))
+  vendor('transform', s("translate(%s, %s, %s)", x, y, z))
 }
 
 // Backface visibility
