@@ -9,127 +9,127 @@
 
 // Grays
 // -------------------------
-$black =                 #000 unless $black;
-$grayDarker =            #222 unless $grayDarker;
-$grayDark =              #333 unless $grayDark;
-$gray =                  #555 unless $gray;
-$grayLight =             #999 unless $grayLight;
-$grayLighter =           #eee unless $grayLighter;
-$white =                 #fff unless $white;
+$black =                 #000 unless $black is defined;
+$grayDarker =            #222 unless $grayDarker is defined;
+$grayDark =              #333 unless $grayDark is defined;
+$gray =                  #555 unless $gray is defined;
+$grayLight =             #999 unless $grayLight is defined;
+$grayLighter =           #eee unless $grayLighter is defined;
+$white =                 #fff unless $white is defined;
 
 
 // Accent colors
 // -------------------------
-$blue =                  #049cdb unless $blue;
-$blueDark =              #0064cd unless $blueDark;
-$green =                 #46a546 unless $green;
-$red =                   #9d261d unless $red;
-$yellow =                #ffc40d unless $yellow;
-$orange =                #f89406 unless $orange;
-$pink =                  #c3325f unless $pink;
-$purple =                #7a43b6 unless $purple;
+$blue =                  #049cdb unless $blue is defined;
+$blueDark =              #0064cd unless $blueDark is defined;
+$green =                 #46a546 unless $green is defined;
+$red =                   #9d261d unless $red is defined;
+$yellow =                #ffc40d unless $yellow is defined;
+$orange =                #f89406 unless $orange is defined;
+$pink =                  #c3325f unless $pink is defined;
+$purple =                #7a43b6 unless $purple is defined;
 
 
 // Scaffolding
 // -------------------------
-$bodyBackground =        $white unless $bodyBackground;
-$textColor =             $grayDark unless $textColor;
+$bodyBackground =        $white unless $bodyBackground is defined;
+$textColor =             $grayDark unless $textColor is defined;
 
 
 // Links
 // -------------------------
-$linkColor =             #08c unless $linkColor;
-$linkColorHover =        darken($linkColor, 15%) unless $linkColorHover;
+$linkColor =             #08c unless $linkColor is defined;
+$linkColorHover =        darken($linkColor, 15%) unless $linkColorHover is defined;
 
 
 // Typography
 // -------------------------
-$sansFontFamily =        "Helvetica Neue", Helvetica, Arial, sans-serif unless $sansFontFamily;
-$serifFontFamily =       Georgia, "Times New Roman", Times, serif unless $serifFontFamily;
-$monoFontFamily =        Monaco, Menlo, Consolas, "Courier New", monospace unless $monoFontFamily;
+$sansFontFamily =        "Helvetica Neue", Helvetica, Arial, sans-serif unless $sansFontFamily is defined;
+$serifFontFamily =       Georgia, "Times New Roman", Times, serif unless $serifFontFamily is defined;
+$monoFontFamily =        Monaco, Menlo, Consolas, "Courier New", monospace unless $monoFontFamily is defined;
 
-$baseFontSize =          14px unless $baseFontSize;
-$baseFontFamily =        $sansFontFamily unless $baseFontFamily;
-$baseLineHeight =        20px unless $baseLineHeight;
-$altFontFamily =         $serifFontFamily unless $altFontFamily;
+$baseFontSize =          14px unless $baseFontSize is defined;
+$baseFontFamily =        $sansFontFamily unless $baseFontFamily is defined;
+$baseLineHeight =        20px unless $baseLineHeight is defined;
+$altFontFamily =         $serifFontFamily unless $altFontFamily is defined;
 
-$headingsFontFamily =    inherit unless $headingsFontFamily; // empty to use BS default, $baseFontFamily
-$headingsFontWeight =    bold unless $headingsFontWeight;    // instead of browser default, bold
-$headingsColor =         inherit unless $headingsColor; // empty to use BS default, $textColor
+$headingsFontFamily =    inherit unless $headingsFontFamily is defined; // empty to use BS default, $baseFontFamily
+$headingsFontWeight =    bold unless $headingsFontWeight is defined;    // instead of browser default, bold
+$headingsColor =         inherit unless $headingsColor is defined; // empty to use BS default, $textColor
 
 
 // Component sizing
 // -------------------------
 // Based on 14px font-size and 20px line-height
 
-$fontSizeLarge =         $baseFontSize * 1.25 unless $fontSizeLarge; // ~18px
-$fontSizeSmall =         $baseFontSize * 0.85 unless $fontSizeSmall; // ~12px
-$fontSizeMini =          $baseFontSize * 0.75 unless $fontSizeMini; // ~11px
+$fontSizeLarge =         $baseFontSize * 1.25 unless $fontSizeLarge is defined; // ~18px
+$fontSizeSmall =         $baseFontSize * 0.85 unless $fontSizeSmall is defined; // ~12px
+$fontSizeMini =          $baseFontSize * 0.75 unless $fontSizeMini is defined; // ~11px
 
-$paddingLarge =          11px 19px unless $paddingLarge; // 44px
-$paddingSmall =          2px 10px unless $paddingSmall;  // 26px
-$paddingMini =           1px 6px unless $paddingMini;   // 24px
+$paddingLarge =          11px 19px unless $paddingLarge is defined; // 44px
+$paddingSmall =          2px 10px unless $paddingSmall is defined;  // 26px
+$paddingMini =           1px 6px unless $paddingMini is defined;   // 24px
 
-$baseBorderRadius =      4px unless $baseBorderRadius;
-$borderRadiusLarge =     6px unless $borderRadiusLarge;
-$borderRadiusSmall =     3px unless $borderRadiusSmall;
+$baseBorderRadius =      4px unless $baseBorderRadius is defined;
+$borderRadiusLarge =     6px unless $borderRadiusLarge is defined;
+$borderRadiusSmall =     3px unless $borderRadiusSmall is defined;
 
 
 // Tables
 // -------------------------
-$tableBackground =                   transparent unless $tableBackground; // overall background-color
-$tableBackgroundAccent =             #f9f9f9 unless $tableBackgroundAccent; // for striping
-$tableBackgroundHover =              #f5f5f5 unless $tableBackgroundHover; // for hover
-$tableBorder =                       #ddd unless $tableBorder; // table and cell border
+$tableBackground =                   transparent unless $tableBackground is defined; // overall background-color
+$tableBackgroundAccent =             #f9f9f9 unless $tableBackgroundAccent is defined; // for striping
+$tableBackgroundHover =              #f5f5f5 unless $tableBackgroundHover is defined; // for hover
+$tableBorder =                       #ddd unless $tableBorder is defined; // table and cell border
 
 // Buttons
 // -------------------------
-$btnBackground =                     $white unless $btnBackground;
-$btnBackgroundHighlight =            darken($white, 10%) unless $btnBackgroundHighlight;
-$btnBorder =                         #bbb unless $btnBorder;
+$btnBackground =                     $white unless $btnBackground is defined;
+$btnBackgroundHighlight =            darken($white, 10%) unless $btnBackgroundHighlight is defined;
+$btnBorder =                         #bbb unless $btnBorder is defined;
 
-$btnPrimaryBackground =              $linkColor unless $btnPrimaryBackground;
-$btnPrimaryBackgroundHighlight =     spin($btnPrimaryBackground, 20%) unless $btnPrimaryBackgroundHighlight;
+$btnPrimaryBackground =              $linkColor unless $btnPrimaryBackground is defined;
+$btnPrimaryBackgroundHighlight =     spin($btnPrimaryBackground, 20%) unless $btnPrimaryBackgroundHighlight is defined;
 
-$btnInfoBackground =                 #5bc0de unless $btnInfoBackground;
-$btnInfoBackgroundHighlight =        #2f96b4 unless $btnInfoBackgroundHighlight;
+$btnInfoBackground =                 #5bc0de unless $btnInfoBackground is defined;
+$btnInfoBackgroundHighlight =        #2f96b4 unless $btnInfoBackgroundHighlight is defined;
 
-$btnSuccessBackground =              #62c462 unless $btnSuccessBackground;
-$btnSuccessBackgroundHighlight =     #51a351 unless $btnSuccessBackgroundHighlight;
+$btnSuccessBackground =              #62c462 unless $btnSuccessBackground is defined;
+$btnSuccessBackgroundHighlight =     #51a351 unless $btnSuccessBackgroundHighlight is defined;
 
-$btnWarningBackground =              lighten($orange, 15%) unless $btnWarningBackground;
-$btnWarningBackgroundHighlight =     $orange unless $btnWarningBackgroundHighlight;
+$btnWarningBackground =              lighten($orange, 15%) unless $btnWarningBackground is defined;
+$btnWarningBackgroundHighlight =     $orange unless $btnWarningBackgroundHighlight is defined;
 
-$btnDangerBackground =               #ee5f5b unless $btnDangerBackground;
-$btnDangerBackgroundHighlight =      #bd362f unless $btnDangerBackgroundHighlight;
+$btnDangerBackground =               #ee5f5b unless $btnDangerBackground is defined;
+$btnDangerBackgroundHighlight =      #bd362f unless $btnDangerBackgroundHighlight is defined;
 
-$btnInverseBackground =              #444 unless $btnInverseBackground;
-$btnInverseBackgroundHighlight =     $grayDarker unless $btnInverseBackgroundHighlight;
+$btnInverseBackground =              #444 unless $btnInverseBackground is defined;
+$btnInverseBackgroundHighlight =     $grayDarker unless $btnInverseBackgroundHighlight is defined;
 
 
 // Forms
 // -------------------------
-$inputBackground =               $white unless $inputBackground;
-$inputBorder =                   #ccc unless $inputBorder;
-$inputBorderRadius =             $baseBorderRadius unless $inputBorderRadius;
-$inputDisabledBackground =       $grayLighter unless $inputDisabledBackground;
-$formActionsBackground =         #f5f5f5 unless $formActionsBackground;
-$inputHeight =                   $baseLineHeight + 10px unless $inputHeight; // base line-height + 8px vertical padding + 2px top/bottom border
+$inputBackground =               $white unless $inputBackground is defined;
+$inputBorder =                   #ccc unless $inputBorder is defined;
+$inputBorderRadius =             $baseBorderRadius unless $inputBorderRadius is defined;
+$inputDisabledBackground =       $grayLighter unless $inputDisabledBackground is defined;
+$formActionsBackground =         #f5f5f5 unless $formActionsBackground is defined;
+$inputHeight =                   $baseLineHeight + 10px unless $inputHeight is defined; // base line-height + 8px vertical padding + 2px top/bottom border
 
 
 // Dropdowns
 // -------------------------
-$dropdownBackground =            $white unless $dropdownBackground;
-$dropdownBorder =                rgba(0,0,0,.2) unless $dropdownBorder;
-$dropdownDividerTop =            #e5e5e5 unless $dropdownDividerTop;
-$dropdownDividerBottom =         $white unless $dropdownDividerBottom;
+$dropdownBackground =            $white unless $dropdownBackground is defined;
+$dropdownBorder =                rgba(0,0,0,.2) unless $dropdownBorder is defined;
+$dropdownDividerTop =            #e5e5e5 unless $dropdownDividerTop is defined;
+$dropdownDividerBottom =         $white unless $dropdownDividerBottom is defined;
 
-$dropdownLinkColor =             $grayDark unless $dropdownLinkColor;
-$dropdownLinkColorHover =        $white unless $dropdownLinkColorHover;
-$dropdownLinkColorActive =       $dropdownLinkColor unless $dropdownLinkColorActive;
+$dropdownLinkColor =             $grayDark unless $dropdownLinkColor is defined;
+$dropdownLinkColorHover =        $white unless $dropdownLinkColorHover is defined;
+$dropdownLinkColorActive =       $dropdownLinkColor unless $dropdownLinkColorActive is defined;
 
-$dropdownLinkBackgroundActive =  $linkColor unless $dropdownLinkBackgroundActive;
-$dropdownLinkBackgroundHover =   $dropdownLinkBackgroundActive unless $dropdownLinkBackgroundHover;
+$dropdownLinkBackgroundActive =  $linkColor unless $dropdownLinkBackgroundActive is defined;
+$dropdownLinkBackgroundHover =   $dropdownLinkBackgroundActive unless $dropdownLinkBackgroundHover is defined;
 
 
 
@@ -141,127 +141,127 @@ $dropdownLinkBackgroundHover =   $dropdownLinkBackgroundActive unless $dropdownL
 // -------------------------
 // Used for a bird's eye view of components dependent on the z-axis
 // Try to avoid customizing these  :)
-$zindexDropdown =          1000 unless $zindexDropdown;
-$zindexPopover =           1010 unless $zindexPopover;
-$zindexTooltip =           1030 unless $zindexTooltip;
-$zindexFixedNavbar =       1030 unless $zindexFixedNavbar;
-$zindexModalBackdrop =     1040 unless $zindexModalBackdrop;
-$zindexModal =             1050 unless $zindexModal;
+$zindexDropdown =          1000 unless $zindexDropdown is defined;
+$zindexPopover =           1010 unless $zindexPopover is defined;
+$zindexTooltip =           1030 unless $zindexTooltip is defined;
+$zindexFixedNavbar =       1030 unless $zindexFixedNavbar is defined;
+$zindexModalBackdrop =     1040 unless $zindexModalBackdrop is defined;
+$zindexModal =             1050 unless $zindexModal is defined;
 
 
 // Sprite icons path
 // -------------------------
-$iconSpritePath =          "../img/glyphicons-halflings.png" unless $iconSpritePath;
-$iconWhiteSpritePath =     "../img/glyphicons-halflings-white.png" unless $iconWhiteSpritePath;
+$iconSpritePath =          "../img/glyphicons-halflings.png" unless $iconSpritePath is defined;
+$iconWhiteSpritePath =     "../img/glyphicons-halflings-white.png" unless $iconWhiteSpritePath is defined;
 
 
 // Input placeholder text color
 // -------------------------
-$placeholderText =         $grayLight unless $placeholderText;
+$placeholderText =         $grayLight unless $placeholderText is defined;
 
 
 // Hr border color
 // -------------------------
-$hrBorder =                $grayLighter unless $hrBorder;
+$hrBorder =                $grayLighter unless $hrBorder is defined;
 
 
 // Horizontal forms & lists
 // -------------------------
-$horizontalComponentOffset =       180px unless $horizontalComponentOffset;
+$horizontalComponentOffset =       180px unless $horizontalComponentOffset is defined;
 
 
 // Wells
 // -------------------------
-$wellBackground =                  #f5f5f5 unless $wellBackground;
+$wellBackground =                  #f5f5f5 unless $wellBackground is defined;
 
 
 // Navbar
 // -------------------------
-$navbarCollapseWidth =             979px unless $navbarCollapseWidth;
-$navbarCollapseDesktopWidth =      $navbarCollapseWidth + 1 unless $navbarCollapseDesktopWidth;
+$navbarCollapseWidth =             979px unless $navbarCollapseWidth is defined;
+$navbarCollapseDesktopWidth =      $navbarCollapseWidth + 1 unless $navbarCollapseDesktopWidth is defined;
 
-$navbarHeight =                    40px unless $navbarHeight;
-$navbarBackgroundHighlight =       #ffffff unless $navbarBackgroundHighlight;
-$navbarBackground =                darken($navbarBackgroundHighlight, 5%) unless $navbarBackground;
-$navbarBorder =                    darken($navbarBackground, 12%) unless $navbarBorder;
+$navbarHeight =                    40px unless $navbarHeight is defined;
+$navbarBackgroundHighlight =       #ffffff unless $navbarBackgroundHighlight is defined;
+$navbarBackground =                darken($navbarBackgroundHighlight, 5%) unless $navbarBackground is defined;
+$navbarBorder =                    darken($navbarBackground, 12%) unless $navbarBorder is defined;
 
-$navbarText =                      #777 unless $navbarText;
-$navbarLinkColor =                 #777 unless $navbarLinkColor;
-$navbarLinkColorHover =            $grayDark unless $navbarLinkColorHover;
-$navbarLinkColorActive =           $gray unless $navbarLinkColorActive;
-$navbarLinkBackgroundHover =       transparent unless $navbarLinkBackgroundHover;
-$navbarLinkBackgroundActive =      darken($navbarBackground, 5%) unless $navbarLinkBackgroundActive;
+$navbarText =                      #777 unless $navbarText is defined;
+$navbarLinkColor =                 #777 unless $navbarLinkColor is defined;
+$navbarLinkColorHover =            $grayDark unless $navbarLinkColorHover is defined;
+$navbarLinkColorActive =           $gray unless $navbarLinkColorActive is defined;
+$navbarLinkBackgroundHover =       transparent unless $navbarLinkBackgroundHover is defined;
+$navbarLinkBackgroundActive =      darken($navbarBackground, 5%) unless $navbarLinkBackgroundActive is defined;
 
-$navbarBrandColor =                $navbarLinkColor unless $navbarBrandColor;
+$navbarBrandColor =                $navbarLinkColor unless $navbarBrandColor is defined;
 
 // Inverted navbar
-$navbarInverseBackground =                #111111 unless $navbarInverseBackground;
-$navbarInverseBackgroundHighlight =       #222222 unless $navbarInverseBackgroundHighlight;
-$navbarInverseBorder =                    #252525 unless $navbarInverseBorder;
+$navbarInverseBackground =                #111111 unless $navbarInverseBackground is defined;
+$navbarInverseBackgroundHighlight =       #222222 unless $navbarInverseBackgroundHighlight is defined;
+$navbarInverseBorder =                    #252525 unless $navbarInverseBorder is defined;
 
-$navbarInverseText =                      $grayLight unless $navbarInverseText;
-$navbarInverseLinkColor =                 $grayLight unless $navbarInverseLinkColor;
-$navbarInverseLinkColorHover =            $white unless $navbarInverseLinkColorHover;
-$navbarInverseLinkColorActive =           $navbarInverseLinkColorHover unless $navbarInverseLinkColorActive;
-$navbarInverseLinkBackgroundHover =       transparent unless $navbarInverseLinkBackgroundHover;
-$navbarInverseLinkBackgroundActive =      $navbarInverseBackground unless $navbarInverseLinkBackgroundActive;
+$navbarInverseText =                      $grayLight unless $navbarInverseText is defined;
+$navbarInverseLinkColor =                 $grayLight unless $navbarInverseLinkColor is defined;
+$navbarInverseLinkColorHover =            $white unless $navbarInverseLinkColorHover is defined;
+$navbarInverseLinkColorActive =           $navbarInverseLinkColorHover unless $navbarInverseLinkColorActive is defined;
+$navbarInverseLinkBackgroundHover =       transparent unless $navbarInverseLinkBackgroundHover is defined;
+$navbarInverseLinkBackgroundActive =      $navbarInverseBackground unless $navbarInverseLinkBackgroundActive is defined;
 
-$navbarInverseSearchBackground =          lighten($navbarInverseBackground, 25%) unless $navbarInverseSearchBackground;
-$navbarInverseSearchBackgroundFocus =     $white unless $navbarInverseSearchBackgroundFocus;
-$navbarInverseSearchBorder =              $navbarInverseBackground unless $navbarInverseSearchBorder;
-$navbarInverseSearchPlaceholderColor =    #ccc unless $navbarInverseSearchPlaceholderColor;
+$navbarInverseSearchBackground =          lighten($navbarInverseBackground, 25%) unless $navbarInverseSearchBackground is defined;
+$navbarInverseSearchBackgroundFocus =     $white unless $navbarInverseSearchBackgroundFocus is defined;
+$navbarInverseSearchBorder =              $navbarInverseBackground unless $navbarInverseSearchBorder is defined;
+$navbarInverseSearchPlaceholderColor =    #ccc unless $navbarInverseSearchPlaceholderColor is defined;
 
-$navbarInverseBrandColor =                $navbarInverseLinkColor unless $navbarInverseBrandColor;
+$navbarInverseBrandColor =                $navbarInverseLinkColor unless $navbarInverseBrandColor is defined;
 
 
 // Pagination
 // -------------------------
-$paginationBackground =                #fff unless $paginationBackground;
-$paginationBorder =                    #ddd unless $paginationBorder;
-$paginationActiveBackground =          #f5f5f5 unless $paginationActiveBackground;
+$paginationBackground =                #fff unless $paginationBackground is defined;
+$paginationBorder =                    #ddd unless $paginationBorder is defined;
+$paginationActiveBackground =          #f5f5f5 unless $paginationActiveBackground is defined;
 
 
 // Hero unit
 // -------------------------
-$heroUnitBackground =              $grayLighter unless $heroUnitBackground;
-$heroUnitHeadingColor =            inherit unless $heroUnitHeadingColor;
-$heroUnitLeadColor =               inherit unless $heroUnitLeadColor;
+$heroUnitBackground =              $grayLighter unless $heroUnitBackground is defined;
+$heroUnitHeadingColor =            inherit unless $heroUnitHeadingColor is defined;
+$heroUnitLeadColor =               inherit unless $heroUnitLeadColor is defined;
 
 
 // Form states and alerts
 // -------------------------
-$warningText =             #c09853 unless $warningText;
-$warningBackground =       #fcf8e3 unless $warningBackground;
-$warningBorder =           darken(spin($warningBackground, -10), 3%) unless $warningBorder;
+$warningText =             #c09853 unless $warningText is defined;
+$warningBackground =       #fcf8e3 unless $warningBackground is defined;
+$warningBorder =           darken(spin($warningBackground, -10), 3%) unless $warningBorder is defined;
 
-$errorText =               #b94a48 unless $errorText;
-$errorBackground =         #f2dede unless $errorBackground;
-$errorBorder =             darken(spin($errorBackground, -10), 3%) unless $errorBorder;
+$errorText =               #b94a48 unless $errorText is defined;
+$errorBackground =         #f2dede unless $errorBackground is defined;
+$errorBorder =             darken(spin($errorBackground, -10), 3%) unless $errorBorder is defined;
 
-$successText =             #468847 unless $successText;
-$successBackground =       #dff0d8 unless $successBackground;
-$successBorder =           darken(spin($successBackground, -10), 5%) unless $successBorder;
+$successText =             #468847 unless $successText is defined;
+$successBackground =       #dff0d8 unless $successBackground is defined;
+$successBorder =           darken(spin($successBackground, -10), 5%) unless $successBorder is defined;
 
-$infoText =                #3a87ad unless $infoText;
-$infoBackground =          #d9edf7 unless $infoBackground;
-$infoBorder =              darken(spin($infoBackground, -10), 7%) unless $infoBorder;
+$infoText =                #3a87ad unless $infoText is defined;
+$infoBackground =          #d9edf7 unless $infoBackground is defined;
+$infoBorder =              darken(spin($infoBackground, -10), 7%) unless $infoBorder is defined;
 
 
 // Tooltips and popovers
 // -------------------------
-$tooltipColor =            #fff unless $tooltipColor;
-$tooltipBackground =       #000 unless $tooltipBackground;
-$tooltipArrowWidth =       5px unless $tooltipArrowWidth;
-$tooltipArrowColor =       $tooltipBackground unless $tooltipArrowColor;
+$tooltipColor =            #fff unless $tooltipColor is defined;
+$tooltipBackground =       #000 unless $tooltipBackground is defined;
+$tooltipArrowWidth =       5px unless $tooltipArrowWidth is defined;
+$tooltipArrowColor =       $tooltipBackground unless $tooltipArrowColor is defined;
 
-$popoverBackground =       #fff unless $popoverBackground;
-$popoverArrowWidth =       10px unless $popoverArrowWidth;
-$popoverArrowColor =       #fff unless $popoverArrowColor;
-$popoverTitleBackground =  darken($popoverBackground, 3%) unless $popoverTitleBackground;
+$popoverBackground =       #fff unless $popoverBackground is defined;
+$popoverArrowWidth =       10px unless $popoverArrowWidth is defined;
+$popoverArrowColor =       #fff unless $popoverArrowColor is defined;
+$popoverTitleBackground =  darken($popoverBackground, 3%) unless $popoverTitleBackground is defined;
 
 // Special enhancement for popovers
-$popoverArrowOuterWidth =  $popoverArrowWidth + 1 unless $popoverArrowOuterWidth;
-$popoverArrowOuterColor =  rgba(0,0,0,.25) unless $popoverArrowOuterColor;
+$popoverArrowOuterWidth =  $popoverArrowWidth + 1 unless $popoverArrowOuterWidth is defined;
+$popoverArrowOuterColor =  rgba(0,0,0,.25) unless $popoverArrowOuterColor is defined;
 
 
 
@@ -271,31 +271,31 @@ $popoverArrowOuterColor =  rgba(0,0,0,.25) unless $popoverArrowOuterColor;
 
 // Default 940px grid
 // -------------------------
-$gridColumns =             12 unless $gridColumns;
-$gridColumnWidth =         60px unless $gridColumnWidth;
-$gridGutterWidth =         20px unless $gridGutterWidth;
-$gridRowWidth =            ($gridColumns * $gridColumnWidth) + ($gridGutterWidth * ($gridColumns - 1)) unless $gridRowWidth;
+$gridColumns =             12 unless $gridColumns is defined;
+$gridColumnWidth =         60px unless $gridColumnWidth is defined;
+$gridGutterWidth =         20px unless $gridGutterWidth is defined;
+$gridRowWidth =            ($gridColumns * $gridColumnWidth) + ($gridGutterWidth * ($gridColumns - 1)) unless $gridRowWidth is defined;
 
 // 1200px min
-$gridColumnWidth1200 =     70px unless $gridColumnWidth1200;
-$gridGutterWidth1200 =     30px unless $gridGutterWidth1200;
-$gridRowWidth1200 =        ($gridColumns * $gridColumnWidth1200) + ($gridGutterWidth1200 * ($gridColumns - 1)) unless $gridRowWidth1200;
+$gridColumnWidth1200 =     70px unless $gridColumnWidth1200 is defined;
+$gridGutterWidth1200 =     30px unless $gridGutterWidth1200 is defined;
+$gridRowWidth1200 =        ($gridColumns * $gridColumnWidth1200) + ($gridGutterWidth1200 * ($gridColumns - 1)) unless $gridRowWidth1200 is defined;
 
 // 768px-979px
-$gridColumnWidth768 =      42px unless $gridColumnWidth768;
-$gridGutterWidth768 =      20px unless $gridGutterWidth768;
-$gridRowWidth768 =         ($gridColumns * $gridColumnWidth768) + ($gridGutterWidth768 * ($gridColumns - 1)) unless $gridRowWidth768;
+$gridColumnWidth768 =      42px unless $gridColumnWidth768 is defined;
+$gridGutterWidth768 =      20px unless $gridGutterWidth768 is defined;
+$gridRowWidth768 =         ($gridColumns * $gridColumnWidth768) + ($gridGutterWidth768 * ($gridColumns - 1)) unless $gridRowWidth768 is defined;
 
 
 // Fluid grid
 // -------------------------
-$fluidGridColumnWidth =    ($gridColumnWidth/$gridRowWidth)*100 unless $fluidGridColumnWidth;
-$fluidGridGutterWidth =    ($gridGutterWidth/$gridRowWidth)*100 unless $fluidGridGutterWidth;
+$fluidGridColumnWidth =    ($gridColumnWidth/$gridRowWidth)*100 unless $fluidGridColumnWidth is defined;
+$fluidGridGutterWidth =    ($gridGutterWidth/$gridRowWidth)*100 unless $fluidGridGutterWidth is defined;
 
 // 1200px min
-$fluidGridColumnWidth1200 =     ($gridColumnWidth1200/$gridRowWidth1200)*100 unless $fluidGridColumnWidth1200;
-$fluidGridGutterWidth1200 =     ($gridGutterWidth1200/$gridRowWidth1200)*100 unless $fluidGridGutterWidth1200;
+$fluidGridColumnWidth1200 =     ($gridColumnWidth1200/$gridRowWidth1200)*100 unless $fluidGridColumnWidth1200 is defined;
+$fluidGridGutterWidth1200 =     ($gridGutterWidth1200/$gridRowWidth1200)*100 unless $fluidGridGutterWidth1200 is defined;
 
 // 768px-979px
-$fluidGridColumnWidth768 =      ($gridColumnWidth768/$gridRowWidth768)*100 unless $fluidGridColumnWidth768;
-$fluidGridGutterWidth768 =      ($gridGutterWidth768/$gridRowWidth768)*100 unless $fluidGridGutterWidth768;
+$fluidGridColumnWidth768 =      ($gridColumnWidth768/$gridRowWidth768)*100 unless $fluidGridColumnWidth768 is defined;
+$fluidGridGutterWidth768 =      ($gridGutterWidth768/$gridRowWidth768)*100 unless $fluidGridGutterWidth768 is defined;
