@@ -1,7 +1,7 @@
 Bootstrap Stylus 2.3.0
 ======================
 
-Port of the amazing [Twitter Bootstrap 2.3.0](http://url.com/ "Title") to [Stylus](http://learnboost.github.com/stylus/).
+Port of the amazing [Twitter Bootstrap 2.3.0](http://url.com/) to [Stylus](http://learnboost.github.com/stylus/).
 
 This version does not have any dependencies on [nib](https://github.com/visionmedia/nib).
 

@@ -659,8 +659,12 @@ inputGridSystem-inputColumns(gridGutterWidth, gridColumnWidth, gridRowWidth, col
 
 inputGridSystem-generate(gridColumns, gridColumnWidth, gridGutterWidth)
   input,
+  select,
   textarea,
   .uneditable-input
+    &[class*="span"]
+      float none
+      margin-left 0
     &.span1
       inputGridSystem-inputColumns(gridGutterWidth, gridColumnWidth, gridRowWidth, 1)
     &.span2
