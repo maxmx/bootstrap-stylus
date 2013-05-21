@@ -1,7 +1,7 @@
-Bootstrap Stylus 2.3.1
+Bootstrap Stylus 2.3.2
 ======================
 
-Port of the amazing [Twitter Bootstrap 2.3.1](https://github.com/twitter/bootstrap) to [Stylus](http://learnboost.github.com/stylus/).
+Port of the amazing [Twitter Bootstrap 2.3.2](https://github.com/twitter/bootstrap) to [Stylus](http://learnboost.github.com/stylus/).
 
 This version does not have any dependencies on [nib](https://github.com/visionmedia/nib).
 
