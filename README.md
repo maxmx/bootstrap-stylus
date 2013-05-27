@@ -11,3 +11,14 @@ There might be some slight color differences due to the differences between the 
 - Compile responsive.styl to get the additional responsive stylesheets.
 
 _Note: This translation is fixed to 12 columns_
+
+### Adding as an npm dependency
+
+This port is not currently an npm module, however you still add the repository to your package.json as dependency.
+
+*Eg:*
+
+	"dependencies": {
+		"bootstrap-stylus": "https://github.com/Acquisio/bootstrap-stylus/tarball/master"
+	}
+
