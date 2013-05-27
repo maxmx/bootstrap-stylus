@@ -6,7 +6,7 @@
 		"type": "git",
 		"url": "https://github.com/Acquisio/bootstrap-stylus"
 	},
-	"main": "stylus/bootstrap.styl",
+	"main": "index.js",
 	"engines": {
 		"node": "x",
 		"npm": "x"
