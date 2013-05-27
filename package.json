@@ -1,0 +1,24 @@
+{
+	"name": "bootstrap-stylus", 
+	"version": "2.3.2",
+	"author": "Maxime Bergeron <maximeb@gmail.com> (https://github.com/maxmx)",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Acquisio/bootstrap-stylus"
+	},
+	"main": "./stylus",
+	"engines": {
+		"node": "x",
+		"npm": "x"
+	},
+	"licenses": [
+		{
+			"type": "MIT",
+			"url": "http://www.opensource.org/licenses/mit-license.php" 
+		}
+	],
+	"contributors": [
+		"William Coates <> (https://github.com/williamcoates)",
+		"Shaun Kirk Wong <shaun.kirk.wong@gmail.com> (https://github.com/skw)"
+	]
+}
