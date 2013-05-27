@@ -12,7 +12,7 @@ There might be some slight color differences due to the differences between the 
 
 _Note: This translation is fixed to 12 columns_
 
-### Adding as an npm dependency
+### Adding as an [npm](https://npmjs.org/) Dependency
 
 This port is not currently an npm module, however you still add the repository to your package.json as dependency.
 
