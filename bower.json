@@ -1,0 +1,11 @@
+{
+  "name": "bootstrap-stylus",
+  "version": "2.3.2",
+  "main": "stylus/boostrap.styl",
+  "description": "A port of Twitter Bootstrap to Stylus",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "components"
+  ]
+}
