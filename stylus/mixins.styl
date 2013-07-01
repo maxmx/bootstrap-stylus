@@ -40,6 +40,10 @@ clearfix() {
   }
 }
 
+.clearfix {
+  clearfix();
+}
+
 // Webkit-style focus
 // ------------------
 tab-focus() {
@@ -127,6 +131,9 @@ hide-text() {
   border: 0;
 }
 
+.hide-text {
+  hide-text();
+}
 
 // FONTS
 // --------------------------------------------------
@@ -174,7 +181,9 @@ input-block-level() {
   box-sizing(border-box); // Makes inputs behave like true block-level elements
 }
 
-
+.input-block-level {
+  input-block-level();
+}
 
 // Mixin for form field states
 formFieldState(textColor = #555, borderColor = #ccc, backgroundColor = #f5f5f5) {
