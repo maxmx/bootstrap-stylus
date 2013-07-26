@@ -580,6 +580,9 @@ gridSystem-generate(gridColumns, gridColumnWidth, gridGutterWidth)
 fluidGridSystem-columns(fluidGridGutterWidth, fluidGridColumnWidth, columns)
   width: 1% * (fluidGridColumnWidth * columns) + (fluidGridGutterWidth * (columns - 1))
 
+fluidGridSystem-offset(fluidGridColumnWidth, fluidGridGutterWidth, columns)
+  margin-left: 1% * (fluidGridColumnWidth * columns) + (fluidGridGutterWidth * (columns - 1)) + (fluidGridGutterWidth * 2)
+
 fluidGridSystem-gridColumn(fluidGridGutterWidth)
   display: block;
   float: left
@@ -602,6 +605,13 @@ fluidGridSystem-generate(gridColumns, fluidGridColumnWidth, fluidGridGutterWidth
     for i in (1..gridColumns)
       .span{i}
         fluidGridSystem-columns(fluidGridGutterWidth, fluidGridColumnWidth, i)
+    // Offset
+    offsetColumns = gridColumns - 1
+    for i in (1..offsetColumns)
+      // Override first-child margin-left 0
+      .offset{i},
+      .offset{i}:first-child
+        fluidGridSystem-offset(fluidGridColumnWidth, fluidGridGutterWidth, i)
 
 // Input grid system
 // -------------------------
