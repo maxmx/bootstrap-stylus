@@ -319,9 +319,9 @@ translate3d(x, y, z) {
 // Default value is `visible`, but can be changed to `hidden
 // See git pull https://github.com/dannykeane/bootstrap.git backface-visibility for examples
 backface-visibility(visibility){
-	-webkit-backface-visibility: visibility;
-	   -moz-backface-visibility: visibility;
-	        backface-visibility: visibility;
+  -webkit-backface-visibility: visibility;
+     -moz-backface-visibility: visibility;
+          backface-visibility: visibility;
 }
 
 // Background clipping
@@ -561,54 +561,17 @@ gridSystem-generate(gridColumns, gridColumnWidth, gridGutterWidth)
   [class*="span"]
     gridSystem-gridColumn(gridGutterWidth)
   // Default columns
-  .span1
-    gridSystem-columns(gridGutterWidth, gridColumnWidth, gridRowWidth, 1)
-  .span2
-    gridSystem-columns(gridGutterWidth, gridColumnWidth, gridRowWidth, 2)
-  .span3
-    gridSystem-columns(gridGutterWidth, gridColumnWidth, gridRowWidth, 3)
-  .span4
-    gridSystem-columns(gridGutterWidth, gridColumnWidth, gridRowWidth, 4)
-  .span5
-    gridSystem-columns(gridGutterWidth, gridColumnWidth, gridRowWidth, 5)
-  .span6
-    gridSystem-columns(gridGutterWidth, gridColumnWidth, gridRowWidth, 6)
-  .span7
-    gridSystem-columns(gridGutterWidth, gridColumnWidth, gridRowWidth, 7)
-  .span8
-    gridSystem-columns(gridGutterWidth, gridColumnWidth, gridRowWidth, 8)
-  .span9
-    gridSystem-columns(gridGutterWidth, gridColumnWidth, gridRowWidth, 9)
-  .span10
-    gridSystem-columns(gridGutterWidth, gridColumnWidth, gridRowWidth, 10)
-  .span11
-    gridSystem-columns(gridGutterWidth, gridColumnWidth, gridRowWidth, 11)
-  .span12,
+  for i in (1..gridColumns)
+    .span{i}
+      gridSystem-columns(gridGutterWidth, gridColumnWidth, gridRowWidth, i)
+  // Container will have same sizes as max span
   .container
-    gridSystem-columns(gridGutterWidth, gridColumnWidth, gridRowWidth, 12)
+    gridSystem-columns(gridGutterWidth, gridColumnWidth, gridRowWidth, gridColumns)
   // Offset column options
-  .offset1
-    gridSystem-offset(gridColumnWidth, gridGutterWidth, 1)
-  .offset2
-    gridSystem-offset(gridColumnWidth, gridGutterWidth, 2)
-  .offset3
-    gridSystem-offset(gridColumnWidth, gridGutterWidth, 3)
-  .offset4
-    gridSystem-offset(gridColumnWidth, gridGutterWidth, 4)
-  .offset5
-    gridSystem-offset(gridColumnWidth, gridGutterWidth, 5)
-  .offset6
-    gridSystem-offset(gridColumnWidth, gridGutterWidth, 6)
-  .offset7
-    gridSystem-offset(gridColumnWidth, gridGutterWidth, 7)
-  .offset8
-    gridSystem-offset(gridColumnWidth, gridGutterWidth, 8)
-  .offset9
-    gridSystem-offset(gridColumnWidth, gridGutterWidth, 9)
-  .offset10
-    gridSystem-offset(gridColumnWidth, gridGutterWidth, 10)
-  .offset11
-    gridSystem-offset(gridColumnWidth, gridGutterWidth, 11)
+  offsetColumns = gridColumns - 1
+  for i in (1..offsetColumns)
+    .offset{i}
+      gridSystem-offset(gridColumnWidth, gridGutterWidth, i)
 
 // Fluid grid system
 // -------------------------
@@ -616,6 +579,9 @@ gridSystem-generate(gridColumns, gridColumnWidth, gridGutterWidth)
 
 fluidGridSystem-columns(fluidGridGutterWidth, fluidGridColumnWidth, columns)
   width: 1% * (fluidGridColumnWidth * columns) + (fluidGridGutterWidth * (columns - 1))
+
+fluidGridSystem-offset(fluidGridColumnWidth, fluidGridGutterWidth, columns)
+  margin-left: 1% * ((fluidGridColumnWidth * columns) + (fluidGridGutterWidth * (columns - 1)) + (fluidGridGutterWidth * 2))
 
 fluidGridSystem-gridColumn(fluidGridGutterWidth)
   display: block;
@@ -636,30 +602,16 @@ fluidGridSystem-generate(gridColumns, fluidGridColumnWidth, fluidGridGutterWidth
     [class*="span"]:first-child
       margin-left: 0
     // Default columns
-    .span1
-      fluidGridSystem-columns(fluidGridGutterWidth, fluidGridColumnWidth, 1)
-    .span2
-      fluidGridSystem-columns(fluidGridGutterWidth, fluidGridColumnWidth, 2)
-    .span3
-      fluidGridSystem-columns(fluidGridGutterWidth, fluidGridColumnWidth, 3)
-    .span4
-      fluidGridSystem-columns(fluidGridGutterWidth, fluidGridColumnWidth, 4)
-    .span5
-      fluidGridSystem-columns(fluidGridGutterWidth, fluidGridColumnWidth, 5)
-    .span6
-      fluidGridSystem-columns(fluidGridGutterWidth, fluidGridColumnWidth, 6)
-    .span7
-      fluidGridSystem-columns(fluidGridGutterWidth, fluidGridColumnWidth, 7)
-    .span8
-      fluidGridSystem-columns(fluidGridGutterWidth, fluidGridColumnWidth, 8)
-    .span9
-      fluidGridSystem-columns(fluidGridGutterWidth, fluidGridColumnWidth, 9)
-    .span10
-      fluidGridSystem-columns(fluidGridGutterWidth, fluidGridColumnWidth, 10)
-    .span11
-      fluidGridSystem-columns(fluidGridGutterWidth, fluidGridColumnWidth, 11)
-    .span12
-      fluidGridSystem-columns(fluidGridGutterWidth, fluidGridColumnWidth, 12)
+    for i in (1..gridColumns)
+      .span{i}
+        fluidGridSystem-columns(fluidGridGutterWidth, fluidGridColumnWidth, i)
+    // Offset
+    offsetColumns = gridColumns - 1
+    for i in (1..offsetColumns)
+      // Override first-child margin-left 0
+      .offset{i},
+      .offset{i}:first-child
+        fluidGridSystem-offset(fluidGridColumnWidth, fluidGridGutterWidth, i)
 
 // Input grid system
 // -------------------------
@@ -674,31 +626,9 @@ inputGridSystem-generate(gridColumns, gridColumnWidth, gridGutterWidth)
     &[class*="span"]
       float none
       margin-left 0
-    &.span1
-      inputGridSystem-inputColumns(gridGutterWidth, gridColumnWidth, gridRowWidth, 1)
-    &.span2
-      inputGridSystem-inputColumns(gridGutterWidth, gridColumnWidth, gridRowWidth, 2)
-    &.span3
-      inputGridSystem-inputColumns(gridGutterWidth, gridColumnWidth, gridRowWidth, 3)
-    &.span4
-      inputGridSystem-inputColumns(gridGutterWidth, gridColumnWidth, gridRowWidth, 4)
-    &.span5
-      inputGridSystem-inputColumns(gridGutterWidth, gridColumnWidth, gridRowWidth, 5)
-    &.span6
-      inputGridSystem-inputColumns(gridGutterWidth, gridColumnWidth, gridRowWidth, 6)
-    &.span7
-      inputGridSystem-inputColumns(gridGutterWidth, gridColumnWidth, gridRowWidth, 7)
-    &.span8
-      inputGridSystem-inputColumns(gridGutterWidth, gridColumnWidth, gridRowWidth, 8)
-    &.span9
-      inputGridSystem-inputColumns(gridGutterWidth, gridColumnWidth, gridRowWidth, 9)
-    &.span10
-      inputGridSystem-inputColumns(gridGutterWidth, gridColumnWidth, gridRowWidth, 10)
-    &.span11
-      inputGridSystem-inputColumns(gridGutterWidth, gridColumnWidth, gridRowWidth, 11)
-    &.span12
-      inputGridSystem-inputColumns(gridGutterWidth, gridColumnWidth, gridRowWidth, 12)
-
+    for i in (1..gridColumns)
+      &.span{i}
+        inputGridSystem-inputColumns(gridGutterWidth, gridColumnWidth, gridRowWidth, i)
 
 // Make a Grid
 // -------------------------
