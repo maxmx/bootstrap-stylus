@@ -581,7 +581,7 @@ fluidGridSystem-columns(fluidGridGutterWidth, fluidGridColumnWidth, columns)
   width: 1% * (fluidGridColumnWidth * columns) + (fluidGridGutterWidth * (columns - 1))
 
 fluidGridSystem-offset(fluidGridColumnWidth, fluidGridGutterWidth, columns)
-  margin-left: 1% * (fluidGridColumnWidth * columns) + (fluidGridGutterWidth * (columns - 1)) + (fluidGridGutterWidth * 2)
+  margin-left: 1% * ((fluidGridColumnWidth * columns) + (fluidGridGutterWidth * (columns - 1)) + (fluidGridGutterWidth * 2))
 
 fluidGridSystem-gridColumn(fluidGridGutterWidth)
   display: block;
