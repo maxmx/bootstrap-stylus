@@ -44,7 +44,7 @@
         "stylus/sprites.styl",
         "stylus/tables.styl",
         "stylus/thumbnails.styl",
-        "stylus/tooltips.styl",
+        "stylus/tooltip.styl",
         "stylus/type.styl",
         "stylus/utilities.styl",
         "stylus/variables.styl",
