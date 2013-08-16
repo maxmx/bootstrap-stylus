@@ -9,7 +9,7 @@
     ],
     "styles":[
         "stylus/accordion.styl",
-        "stylus/alert.styl",
+        "stylus/alerts.styl",
         "stylus/bootstrap.styl",
         "stylus/breadcrumbs.styl",
         "stylus/button-groups.styl",
