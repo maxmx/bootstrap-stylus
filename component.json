@@ -8,9 +8,14 @@
         "bootstrap"
     ],
     "styles":[
+        "stylus/bootstrap.styl"
+
+    ],
+    "files":[
+        "img/glyphicons-halflings-white.png",
+        "img/glyphicons-halflings.png",
         "stylus/accordion.styl",
         "stylus/alerts.styl",
-        "stylus/bootstrap.styl",
         "stylus/breadcrumbs.styl",
         "stylus/button-groups.styl",
         "stylus/buttons.styl",
@@ -49,9 +54,5 @@
         "stylus/utilities.styl",
         "stylus/variables.styl",
         "stylus/wells.styl"
-    ],
-    "files":[
-        "img/glyphicons-halflings-white.png",
-        "img/glyphicons-halflings.png"
     ]
 }
