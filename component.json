@@ -8,7 +8,7 @@
         "bootstrap"
     ],
     "styles":[
-        "stylus/boostrap.styl"
+        "stylus/bootstrap.styl"
     ],
     "files":[
         "img/glyphicons-halflings-white.png",
