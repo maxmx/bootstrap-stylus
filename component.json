@@ -7,12 +7,6 @@
         "twitter",
         "bootstrap"
     ],
-    "dependencies":{
-        "component/jquery":"*"
-    },
-    "scripts":[
-        "index.js"
-    ],
     "styles":[
         "stylus/boostrap.styl"
     ],
