@@ -41,7 +41,7 @@
         "stylus/responsive-utilities.styl",
         "stylus/responsive.styl",
         "stylus/scaffolding.styl",
-        "stylus/stripes.styl",
+        "stylus/sprites.styl",
         "stylus/tables.styl",
         "stylus/thumbnails.styl",
         "stylus/tooltips.styl",
