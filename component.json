@@ -48,7 +48,7 @@
         "stylus/type.styl",
         "stylus/utilities.styl",
         "stylus/variables.styl",
-        "stylus/wells.styl",
+        "stylus/wells.styl"
     ],
     "files":[
         "img/glyphicons-halflings-white.png",
