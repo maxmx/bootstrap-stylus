@@ -1,6 +1,6 @@
 {
     "name":"bootstrap",
-	"version": "2.3.2",
+    "version": "2.3.2",
     "description": "A port of Twitter Bootstrap to Stylus",
     "homepage":"http://twitter.github.com/bootstrap",
     "keywords":[
@@ -9,7 +9,6 @@
     ],
     "styles":[
         "stylus/bootstrap.styl"
-
     ],
     "files":[
         "img/glyphicons-halflings-white.png",
