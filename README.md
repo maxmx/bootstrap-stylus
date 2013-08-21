@@ -13,3 +13,11 @@ There might be some slight color differences due to the differences between the 
 _Bug: navbarCollapseWidth is not used because of a stylus bug, you must go edit the value directly in the responsive-navbar file._
 _Note: This translation is fixed to 12 columns_
 
+## Installing
+
+via [Bower](https://github.com/bower/bower):
+
+```
+$ bower install bootstrap-stylus
+```
+
