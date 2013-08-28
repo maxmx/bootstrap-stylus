@@ -116,35 +116,35 @@ box-shadow(shadow...) {
 }
 
 // Transitions
-transition(transition...) {
-  -webkit-transition: transition;
-          transition: transition;
+transition(trans...) {
+  -webkit-transition: trans;
+          transition: trans;
 }
-transition-delay(transition-delay) {
-  -webkit-transition-delay: transition-delay;
-          transition-delay: transition-delay;
+transition-delay(trans-delay) {
+  -webkit-transition-delay: trans-delay;
+          transition-delay: trans-delay;
 }
-transition-duration(transition-duration) {
-  -webkit-transition-duration: transition-duration;
-          transition-duration: transition-duration;
+transition-duration(trans-dur) {
+  -webkit-transition-duration: trans-dur;
+          transition-duration: trans-dur;
 }
-transition-transform(transition) {
-  -webkit-transition: -webkit-transform transition;
-     -moz-transition: -moz-transform transition;
-       -o-transition: -o-transform transition;
-          transition: transform transition;
+transition-transform(trans...) {
+  -webkit-transition: -webkit-transform trans;
+     -moz-transition: -moz-transform trans;
+       -o-transition: -o-transform trans;
+          transition: transform trans;
 }
 
 // Transformations
 rotate(degrees) {
-  -webkit-transform: rotate(degrees);
-      -ms-transform: rotate(degrees); // IE9+
-          transform: rotate(degrees);
+  -webkit-transform: s("rotate(%s)", degrees);
+      -ms-transform: s("rotate(%s)", degrees); // IE9+
+          transform: s("rotate(%s)", degrees);
 }
 scale(ratio) {
-  -webkit-transform: scale(ratio);
-      -ms-transform: scale(ratio); // IE9+
-          transform: scale(ratio);
+  -webkit-transform: s("scale(%s)", ratio);
+      -ms-transform: s("scale(%s)", ratio); // IE9+
+          transform: s("scale(%s)", ratio);
 }
 translate(x, y) {
   -webkit-transform: s("translate(%s, %s)", x, y);
@@ -152,9 +152,9 @@ translate(x, y) {
           transform: s("translate(%s, %s)", x, y);
 }
 skew(x, y) {
-  -webkit-transform: skew(x, y);
-      -ms-transform: skewX(x) skewY(y); // See https://github.com/twbs/bootstrap/issues/4885; IE9+
-          transform: skew(x, y);
+  -webkit-transform: s("skew(%s, %s)", x, y);
+      -ms-transform: s("skewX(%s) skewY(%s)", x, y); // See https://github.com/twbs/bootstrap/issues/4885; IE9+
+          transform: s("skew(%s, %s)", x, y);
 }
 translate3d(x, y, z) {
   -webkit-transform: s("translate3d(%s, %s, %s)", x, y, z);
