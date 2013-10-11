@@ -90,5 +90,5 @@ module.exports = function(grunt) {
   grunt.registerTask('dist', ['clean','stylus:bootstrap', 'cssmin:bootstrap', 'uglify']);
   grunt.registerTask('theme', ['stylus:theme', 'cssmin:theme']);
   grunt.registerTask('watch', ['stylus:bootstrap', 'watch:css']);
-
+  grunt.registerTask('build', ['clean','stylus:bootstrap', 'stylus:theme', 'cssmin:bootstrap', 'cssmin:theme', 'uglify']);
 };
