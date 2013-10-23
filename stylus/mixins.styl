@@ -542,7 +542,7 @@ make-row(gutter = $grid-gutter-width) {
 make-xs-column(columns, gutter = $grid-gutter-width) {
   position: relative;
   float: left;
-  width: percentage(columns, grid-columns)
+  width: percentage(columns, $grid-columns)
   // Prevent columns from collapsing when empty
   min-height: 1px;
   // Inner gutter via padding
