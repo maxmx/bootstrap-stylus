@@ -593,7 +593,7 @@ make-md-column(columns, gutter = $grid-gutter-width) {
   padding-right: (gutter / 2);
 
   // Calculate width based on number of columns available
-  @media $media-min-lg-desktop {
+  @media $media-min-desktop {
     float: left;
     width: percentage(columns, $grid-columns);
   }
@@ -601,17 +601,17 @@ make-md-column(columns, gutter = $grid-gutter-width) {
 
 // Generate the large column offsets
 make-md-column-offset(columns) {
-  @media $media-min-lg-desktop {
+  @media $media-min-desktop {
     margin-left: percentage(columns, $grid-columns);
   }
 }
 make-md-column-push(columns) {
-  @media $media-min-lg-desktop {
+  @media $media-min-desktop {
     left: percentage(columns, $grid-columns);
   }
 }
 make-md-column-pull(columns) {
-  @media $media-min-lg-desktop {
+  @media $media-min-desktop {
     right: percentage(columns, $grid-columns);
   }
 }
