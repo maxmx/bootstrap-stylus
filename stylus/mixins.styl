@@ -794,10 +794,6 @@ $column-properties {
   padding-right: ($grid-gutter-width / 2);
 }
 
-$column-float-properties {
-  float left
-}
-
 make-grid-columns()
   for i in 1..$grid-columns
     .col-xs-{i}, .col-sm-{i}, .col-md-{i}, .col-lg-{i}
@@ -807,7 +803,7 @@ make-grid-columns()
 make-grid-col-float(class)
   for i in 1..$grid-columns
     .col-{class}-{i}
-      @extend $column-float-properties
+      float left
 
 
 calc-grid(index, class, type)
