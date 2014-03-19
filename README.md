@@ -1,11 +1,9 @@
-Bootstrap Stylus 3.0.0
+Bootstrap Stylus 3.1.0
 ======================
 
-Port of the amazing [Bootstrap 3.0.0](https://github.com/twbs/bootstrap) to [Stylus 0.32.1](http://learnboost.github.com/stylus/).
+Port of the amazing [Bootstrap 3.1.0](https://github.com/twbs/bootstrap) to [Stylus 0.42.0](http://learnboost.github.com/stylus/).
 
-This version does not have any dependencies on [nib](https://github.com/visionmedia/nib). 
-
-( _Note: Bootstrap Stylus must be imported before nib so that Stylus libs are not transpiled as nib mixins_ )
+This version removes the mixins and prefers [nib](https://github.com/visionmedia/nib).
 
 There might be some slight color differences due to the differences between the color functions in LESS and those in Stylus.
 
