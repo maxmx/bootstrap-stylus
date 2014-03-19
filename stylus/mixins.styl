@@ -162,41 +162,41 @@ border-left-radius(radius) {
 // }
 
 // Transformations
-// rotate(degrees) {
-//   -webkit-transform: s("rotate(%s)", degrees);
-//       -ms-transform: s("rotate(%s)", degrees); // IE9+
-//           transform: s("rotate(%s)", degrees);
-// }
-// scale(ratio) {
-//   -webkit-transform: s("scale(%s)", ratio);
-//       -ms-transform: s("scale(%s)", ratio); // IE9+
-//           transform: s("scale(%s)", ratio);
-// }
-// translate(x, y) {
-//   -webkit-transform: s("translate(%s, %s)", x, y);
-//       -ms-transform: s("translate(%s, %s)", x, y); // IE9+
-//           transform: s("translate(%s, %s)", x, y);
-// }
-// skew(x, y) {
-//   -webkit-transform: s("skew(%s, %s)", x, y);
-//       -ms-transform: s("skewX(%s) skewY(%s)", x, y); // See https://github.com/twbs/bootstrap/issues/4885; IE9+
-//           transform: s("skew(%s, %s)", x, y);
-// }
-// translate3d(x, y, z) {
-//   -webkit-transform: s("translate3d(%s, %s, %s)", x, y, z);
-//           transform: s("translate3d(%s, %s, %s)", x, y, z);
-// }
+rotate(degrees) {
+  -webkit-transform: s("rotate(%s)", degrees);
+      -ms-transform: s("rotate(%s)", degrees); // IE9+
+          transform: s("rotate(%s)", degrees);
+}
+scale(ratio) {
+  -webkit-transform: s("scale(%s)", ratio);
+      -ms-transform: s("scale(%s)", ratio); // IE9+
+          transform: s("scale(%s)", ratio);
+}
+translate(x, y) {
+  -webkit-transform: s("translate(%s, %s)", x, y);
+      -ms-transform: s("translate(%s, %s)", x, y); // IE9+
+          transform: s("translate(%s, %s)", x, y);
+}
+skew(x, y) {
+  -webkit-transform: s("skew(%s, %s)", x, y);
+      -ms-transform: s("skewX(%s) skewY(%s)", x, y); // See https://github.com/twbs/bootstrap/issues/4885; IE9+
+          transform: s("skew(%s, %s)", x, y);
+}
+translate3d(x, y, z) {
+  -webkit-transform: s("translate3d(%s, %s, %s)", x, y, z);
+          transform: s("translate3d(%s, %s, %s)", x, y, z);
+}
 
-// rotateX(deg) {
-//   -webkit-transform: s("rotateX(%s)", deg);
-//       -ms-transform: s("rotateX(%s)", deg); // IE9 only
-//           transform: s("rotateX(%s)", deg);
-// }
-// rotateY(deg) {
-//   -webkit-transform: s("rotateY(%s)", deg);
-//       -ms-transform: s("rotateY(%s)", deg); // IE9 only
-//           transform: s("rotateY(%s)", deg);
-// }
+rotateX(deg) {
+  -webkit-transform: s("rotateX(%s)", deg);
+      -ms-transform: s("rotateX(%s)", deg); // IE9 only
+          transform: s("rotateX(%s)", deg);
+}
+rotateY(deg) {
+  -webkit-transform: s("rotateY(%s)", deg);
+      -ms-transform: s("rotateY(%s)", deg); // IE9 only
+          transform: s("rotateY(%s)", deg);
+}
 // perspective(p) {
 //   -webkit-perspective: p;
 //      -moz-perspective: p;
