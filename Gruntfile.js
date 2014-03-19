@@ -28,7 +28,7 @@ module.exports = function(grunt) {
     theme: {
       options: {
         paths: ['stylus'],
-        urlfunc: 'embedurl', // use embedurl('test.png') in our code to trigger Data URI embedding
+        urlfunc: 'embedurl',
         use: [
           require('nib')
         ]
@@ -44,7 +44,7 @@ module.exports = function(grunt) {
 
   watch: {
     css: {
-      files: 'stylus/**/*.styl',
+      files: 'stylus/*.styl',
       tasks: ['stylus'],
       options: {
         debounceDelay: 250
@@ -101,6 +101,5 @@ module.exports = function(grunt) {
 
   grunt.registerTask('dist', ['clean','stylus:bootstrap', 'cssmin:bootstrap', 'uglify']);
   grunt.registerTask('theme', ['stylus:theme', 'cssmin:theme']);
-  grunt.registerTask('watch', ['stylus:bootstrap', 'watch:css']);
   grunt.registerTask('build', ['clean','stylus:bootstrap', 'stylus:theme', 'cssmin:bootstrap', 'cssmin:theme', 'uglify']);
 };

@@ -1,15 +1,15 @@
 {
   "name": "bootstrap-stylus",
-  "version": "3.0.0",
+  "version": "3.1.0",
   "devDependencies": {
-    "grunt": "~0.4.0",
-    "stylus": "*",
-    "nib": "*",
-    "grunt-contrib-stylus": "~0.5.0",
-	"grunt-contrib-watch": "~0.2.0",
-    "grunt-contrib-cssmin": "~0.4.1",
-    "grunt-contrib-clean": "~0.4.0",
-	"grunt-contrib-uglify": "~0.1.1"
+    "grunt": "~0.4.2",
+    "stylus": "~0.42.0",
+    "nib": "~1.0.2",
+    "grunt-contrib-stylus": "~0.13.2",
+	  "grunt-contrib-watch": "~0.5.3",
+    "grunt-contrib-cssmin": "~0.7.0",
+    "grunt-contrib-clean": "~0.5.0",
+	  "grunt-contrib-uglify": "~0.3.2"
   },
   "dependencies": {}
 }

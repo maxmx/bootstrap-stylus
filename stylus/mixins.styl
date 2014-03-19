@@ -26,18 +26,22 @@ percentage(n1, n2)
 clearfix() {
   &:before,
   &:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
+    content: " "; // 1
+    display: table; // 2
   }
   &:after {
     clear: both;
   }
 }
 
+.clearfix {
+  clearfix();
+}
+
 // Webkit-style focus
 tab-focus() {
   // Default
-  outline: thin dotted #333;
+  outline: thin dotted;
   // Webkit
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
@@ -50,7 +54,7 @@ center-block() {
   margin-right: auto;
 }
 
-// Sizing shortcuts
+// Sizing shortcutss
 size(w, h) {
   width: w;
   height: h;
@@ -62,8 +66,10 @@ square(l) {
 
 // Placeholder text
 placeholder(color = $input-color-placeholder) {
-  &:-moz-placeholder            { color: color; } // Firefox 4-18
-  &::-moz-placeholder           { color: color; } // Firefox 19+
+  &:-moz-placeholder            {
+    color: color; // Firefox
+    opacity: 1
+  }
   &:-ms-input-placeholder       { color: color; } // Internet Explorer 10+
   &::-webkit-input-placeholder  { color: color; } // Safari and Chrome
 }
@@ -77,13 +83,29 @@ text-overflow() {
 }
 
 // CSS image replacement
+//
+// Heads up! v3 launched with with only `.hide-text()`, but per our pattern for
+// mixins being reused as classes with the same name, this doesn't hold up. As
+// of v3.0.1 we have added `.text-hide()` and deprecated `.hide-text()`. Note
+// that we cannot chain the mixins together in Less, so they are repeated.
+//
 // Source: https://github.com/h5bp/html5-boilerplate/commit/aa0396eae757
+
+// Deprecated as of v3.0.1 (will be removed in v4)
 hide-text() {
   font: unquote("0/0") a;
   color: transparent;
   text-shadow: none;
   background-color: transparent;
   border: 0;
+}
+// New mixin to use as of v3.0.1
+text-hide() {
+  hide-text();
+}
+
+.text-hide {
+  text-hide()
 }
 
 
@@ -109,31 +131,35 @@ border-left-radius(radius) {
      border-top-left-radius: radius;
 }
 
-// Drop shadows
-box-shadow(shadow...) {
-  -webkit-box-shadow: shadow; // iOS <4.3 & Android <4.1
-          box-shadow: shadow;
-}
+// // Drop shadows
+// box-shadow(shadow...) {
+//   -webkit-box-shadow: shadow; // iOS <4.3 & Android <4.1
+//           box-shadow: shadow;
+// }
 
 // Transitions
-transition(trans...) {
-  -webkit-transition: trans;
-          transition: trans;
-}
-transition-delay(trans-delay) {
-  -webkit-transition-delay: trans-delay;
-          transition-delay: trans-delay;
-}
-transition-duration(trans-dur) {
-  -webkit-transition-duration: trans-dur;
-          transition-duration: trans-dur;
-}
-transition-transform(trans...) {
-  -webkit-transition: -webkit-transform trans;
-     -moz-transition: -moz-transform trans;
-       -o-transition: -o-transform trans;
-          transition: transform trans;
-}
+// transition(trans...) {
+//   -webkit-transition: trans;
+//           transition: trans;
+// }
+// transition-property(trans-prop) {
+//   -webkit-transition-property: trans-prop;
+//           transition-property: trans-prop;
+// }
+// transition-delay(trans-delay) {
+//   -webkit-transition-delay: trans-delay;
+//           transition-delay: trans-delay;
+// }
+// transition-duration(trans-dur) {
+//   -webkit-transition-duration: trans-dur;
+//           transition-duration: trans-dur;
+// }
+// transition-transform(trans...) {
+//   -webkit-transition: -webkit-transform trans;
+//      -moz-transition: -moz-transform trans;
+//        -o-transition: -o-transform trans;
+//           transition: transform trans;
+// }
 
 // Transformations
 rotate(degrees) {
@@ -161,32 +187,88 @@ translate3d(x, y, z) {
           transform: s("translate3d(%s, %s, %s)", x, y, z);
 }
 
+rotateX(deg) {
+  -webkit-transform: s("rotateX(%s)", deg);
+      -ms-transform: s("rotateX(%s)", deg); // IE9 only
+          transform: s("rotateX(%s)", deg);
+}
+rotateY(deg) {
+  -webkit-transform: s("rotateY(%s)", deg);
+      -ms-transform: s("rotateY(%s)", deg); // IE9 only
+          transform: s("rotateY(%s)", deg);
+}
+perspective(p) {
+  -webkit-perspective: p;
+     -moz-perspective: p;
+          perspective: p;
+}
+perspective-origin(p) {
+  -webkit-perspective-origin: p;
+     -moz-perspective-origin: p;
+          perspective-origin: p;
+}
+transform-origin(o) {
+  -webkit-transform-origin: o;
+     -moz-transform-origin: o;
+      -ms-transform-origin: o; // IE9 only
+          transform-origin: o;
+}
+
+// Animations
+// animation(anim) {
+//   -webkit-animation: anim;
+//           animation: anim;
+// }
+// animation-name(name) {
+//   -webkit-animation-name: name;
+//           animation-name: name;
+// }
+// animation-duration(duration) {
+//   -webkit-animation-duration: duration;
+//           animation-duration: duration;
+// }
+// animation-timing-function(timing-function) {
+//   -webkit-animation-timing-function: timing-function;
+//           animation-timing-function: timing-function;
+// }
+// animation-delay(delay) {
+//   -webkit-animation-delay: delay;
+//           animation-delay: delay;
+// }
+// animation-iteration-count(icount) {
+//   -webkit-animation-iteration-count: icount;
+//           animation-iteration-count: icount;
+// }
+// animation-direction(d) {
+//   -webkit-animation-direction: d;
+//           animation-direction: d;
+// }
+
 // Backface visibility
 // Prevent browsers from flickering when using CSS 3D transforms.
 // Default value is `visible`, but can be changed to `hidden`
-// See git pull https://github.com/dannykeane/bootstrap.git backface-visibility for examples
-backface-visibility(visibility){
-  -webkit-backface-visibility: visibility;
-     -moz-backface-visibility: visibility;
-          backface-visibility: visibility;
-}
+// backface-visibility(visibility){
+//   -webkit-backface-visibility: visibility;
+//      -moz-backface-visibility: visibility;
+//           backface-visibility: visibility;
+// }
 
 // Box sizing
-box-sizing(boxmodel) {
-  -webkit-box-sizing: boxmodel;
-     -moz-box-sizing: boxmodel;
-          box-sizing: boxmodel;
-}
+// box-sizing(boxmodel) {
+//   -webkit-box-sizing: boxmodel;
+//      -moz-box-sizing: boxmodel;
+//           box-sizing: boxmodel;
+// }
 
 // User select
 // For selecting text on the page
-user-select(select) {
-  -webkit-user-select: select;
-     -moz-user-select: select;
-      -ms-user-select: select; // IE10+
-       -o-user-select: select;
-          user-select: select;
-}
+// user-select(select) {
+//   -webkit-user-select: select;
+//      -moz-user-select: select;
+//       -ms-user-select: select; // IE10+
+//        -o-user-select: select;
+//           user-select: select;
+// }
 
 // Resize anything
 resizable(direction) {
@@ -205,14 +287,14 @@ content-columns(column-count, column-gap = $grid-gutter-width) {
 }
 
 // Optional hyphenation
-hyphens(mode = auto) {
-  word-wrap: break-word;
-  -webkit-hyphens: mode;
-     -moz-hyphens: mode;
-      -ms-hyphens: mode; // IE10+
-       -o-hyphens: mode;
-          hyphens: mode;
-}
+// hyphens(mode = auto) {
+//   word-wrap: break-word;
+//   -webkit-hyphens: mode;
+//      -moz-hyphens: mode;
+//       -ms-hyphens: mode; // IE10+
+//        -o-hyphens: mode;
+//           hyphens: mode;
+// }
 
 // Opacity
 opacity(opacity) {
@@ -374,7 +456,7 @@ alert-variant(background, border, text-color) {
 
 // Tables
 // -------------------------
-table-row-variant(state, background, border) {
+table-row-variant(state, background) {
   // Exact selectors below required to override `.table-striped` and prevent
   // inheritance to nested tables.
   .table > thead > tr,
@@ -385,7 +467,6 @@ table-row-variant(state, background, border) {
     &.{state} > td,
     &.{state} > th {
       background-color: background;
-      border-color: border;
     }
   }
 
@@ -397,7 +478,34 @@ table-row-variant(state, background, border) {
     &.{state}:hover > td,
     &.{state}:hover > th {
       background-color: darken(background, 5%);
-      border-color: darken(border, 5%);
+    }
+  }
+}
+
+// List Groups
+// -------------------------
+list-group-item-variant($state, $background, $color) {
+  .list-group-item-{$state} {
+    color: $color;
+    background-color: $background;
+
+    a& {
+      color: $color;
+
+      .list-group-item-heading { color: inherit; }
+
+      &:hover,
+      &:focus {
+        color: $color;
+        background-color: darken($background, 5%);
+      }
+      &.active,
+      &.active:hover,
+      &.active:focus {
+        color: #fff;
+        background-color: $color;
+        border-color: $color;
+      }
     }
   }
 }
@@ -436,6 +544,11 @@ button-variant(color, background, border) {
       background-color: background;
           border-color: border
     }
+  }
+
+  .badge {
+    color: background;
+    background-color: color;
   }
 }
 
@@ -484,6 +597,25 @@ label-variant(color) {
   }
 }
 
+// Contextual backgrounds
+// -------------------------
+bg-variant($color) {
+  background-color: $color;
+  a&:hover {
+    background-color: darken($color, 10%);
+  }
+}
+
+// Typography
+// -------------------------
+text-emphasis-variant($color) {
+  color: $color;
+  a&:hover {
+    color: darken($color, 10%);
+  }
+}
+
+
 // Navbar vertical align
 // -------------------------
 // Vertically center elements in the navbar.
@@ -507,6 +639,7 @@ progress-bar-variant(color) {
 // More easily include all the states for responsive-utilities.less.
 responsive-visibility() {
   display: block !important;
+  table&  { display: table; }
   tr& { display: table-row !important; }
   th&,
   td& { display: table-cell !important; }
@@ -514,9 +647,6 @@ responsive-visibility() {
 
 responsive-invisibility() {
   display: none !important;
-  tr& { display: none !important; }
-  th&,
-  td& { display: none !important; }
 }
 
 // Grid System
@@ -528,14 +658,14 @@ container-fixed() {
   margin-left: auto;
   padding-left:  ($grid-gutter-width / 2);
   padding-right: ($grid-gutter-width / 2);
-  clearfix();
+  @extend .clearfix
 }
 
 // Creates a wrapper for a series of columns
 make-row(gutter = $grid-gutter-width) {
   margin-left:  (gutter / -2);
   margin-right: (gutter / -2);
-  clearfix();
+  @extend .clearfix
 }
 
 // Generate the extra small columns
@@ -549,24 +679,35 @@ make-xs-column(columns, gutter = $grid-gutter-width) {
   padding-left:  (gutter / 2);
   padding-right: (gutter / 2);
 }
+make-xs-column-offset(columns) {
+  @media $media-min-phone {
+    margin-left: percentage(columns, $grid-columns);
+  }
+}
+make-xs-column-push(columns) {
+  @media $media-min-phone {
+    left: percentage(columns, $grid-columns);
+  }
+}
+make-xs-column-pull(columns) {
+  @media $media-min-phone {
+    right: percentage(columns, $grid-columns);
+  }
+}
 
 // Generate the small columns
 make-sm-column(columns, gutter = $grid-gutter-width) {
   position: relative;
-  // Prevent columns from collapsing when empty
   min-height: 1px;
-  // Inner gutter via padding
   padding-left:  (gutter / 2);
   padding-right: (gutter / 2);
 
-  // Calculate width based on number of columns available
   @media $media-min-tablet {
     float: left;
     width: percentage(columns, $grid-columns);
   }
 }
 
-// Generate the small column offsets
 make-sm-column-offset(columns) {
   @media $media-min-tablet {
     margin-left: percentage(columns, $grid-columns);
@@ -586,20 +727,16 @@ make-sm-column-pull(columns) {
 // Generate the medium columns
 make-md-column(columns, gutter = $grid-gutter-width) {
   position: relative;
-  // Prevent columns from collapsing when empty
   min-height: 1px;
-  // Inner gutter via padding
   padding-left:  (gutter / 2);
   padding-right: (gutter / 2);
 
-  // Calculate width based on number of columns available
   @media $media-min-desktop {
     float: left;
     width: percentage(columns, $grid-columns);
   }
 }
 
-// Generate the large column offsets
 make-md-column-offset(columns) {
   @media $media-min-desktop {
     margin-left: percentage(columns, $grid-columns);
@@ -619,20 +756,16 @@ make-md-column-pull(columns) {
 // Generate the large columns
 make-lg-column(columns, gutter = $grid-gutter-width) {
   position: relative;
-  // Prevent columns from collapsing when empty
   min-height: 1px;
-  // Inner gutter via padding
   padding-left:  (gutter / 2);
   padding-right: (gutter / 2);
 
-  // Calculate width based on number of columns available
   @media $media-min-lg-desktop {
     float: left;
     width: percentage(columns, $grid-columns);
   }
 }
 
-// Generate the large column offsets
 make-lg-column-offset(columns) {
   @media $media-min-lg-desktop {
     margin-left: percentage(columns, $grid-columns);
@@ -649,6 +782,53 @@ make-lg-column-pull(columns) {
   }
 }
 
+// Framework grid generation
+//
+// Used only by Bootstrap to generate the correct number of grid classes given
+// any value of `@grid-columns`.
+
+$column-properties {
+  position: relative;
+  min-height: 1px;
+  padding-left:  ($grid-gutter-width / 2);
+  padding-right: ($grid-gutter-width / 2);
+}
+
+$column-float-properties {
+  float left
+}
+
+make-grid-columns()
+  for i in 1..$grid-columns
+    .col-xs-{i}, .col-sm-{i}, .col-md-{i}, .col-lg-{i}
+      @extend $column-properties
+
+
+make-grid-col-float(class)
+  for i in 1..$grid-columns
+    .col-{class}-{i}
+      @extend $column-float-properties
+
+
+calc-grid(index, class, type)
+  if type == width
+    .col-{class}-{index}
+      width percentage(index, $grid-columns)
+  if type == push
+    .col-{class}-push-{index}
+      left percentage(index, $grid-columns)
+  if type == pull
+    .col-{class}-pull-{index}
+      right percentage(index, $grid-columns)
+  if type == offset
+    .col-{class}-offset-{index}
+      margin-left percentage(index, $grid-columns)
+
+
+// Basic looping in Stylus (not sure if the ordering needs to be reversed, but I still did it this way)
+make-grid(columns, class, type)
+  for i in columns..1
+    calc-grid(i, class, type)
 
 // Form validation states
 //
@@ -658,7 +838,11 @@ make-lg-column-pull(columns) {
 form-control-validation(text-color = #555, border-color = #ccc, background-color = #f5f5f5) {
   // Color the label and help text
   .help-block,
-  .control-label {
+  .control-label,
+  .radio,
+  .checkbox,
+  .radio-inline,
+  .checkbox-inline  {
     color: text-color;
   }
   // Set the border and box shadow on specific inputs to match
@@ -676,6 +860,10 @@ form-control-validation(text-color = #555, border-color = #ccc, background-color
     color: text-color;
     border-color: border-color;
     background-color: background-color;
+  }
+  // Optional feedback icon
+  .form-control-feedback {
+    color: text-color;
   }
 }
 
@@ -719,7 +907,8 @@ input-size(input-height, padding-vertical, padding-horizontal, font-size, line-h
     line-height: input-height;
   }
 
-  textarea& {
+  textarea&,
+  select[multiple]& {
     height: auto;
   }
 }

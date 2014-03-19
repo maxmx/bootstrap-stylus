@@ -9,11 +9,12 @@
 .clearfix {
   clearfix();
 }
-
+.center-block {
+  center-block();
+}
 pull-right() {
   float: right !important;
 }
-
 pull-left() {
   float: left !important;
 }
@@ -30,6 +31,7 @@ pull-left() {
 // Toggling content
 // -------------------------
 
+// Note: Deprecated .hide in favor of .hidden or .sr-only (as appropriate) in v3.0.1
 .hide {
   display: none !important;
 }
@@ -40,7 +42,17 @@ pull-left() {
   visibility: hidden;
 }
 .text-hide {
-  hide-text();
+  text-hide();
+}
+
+
+// Hide from screenreaders and browsers
+//
+// Credit: HTML5 Boilerplate
+
+.hidden {
+  display: none !important;
+  visibility: hidden !important;
 }
 
 
