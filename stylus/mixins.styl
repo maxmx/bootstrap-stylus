@@ -804,15 +804,18 @@ make-grid-columns()
 
 
 make-grid-col-float(class)
-  for i in 1..$grid-columns
+  .col-{class}-1
+    float left
+  for i in 2..$grid-columns
     .col-{class}-{i}
-      float left
+      @extend .col-{class}-1
 
 
 calc-grid(index, class, type)
-  if type == width
-    .col-{class}-{index}
-      width percentage(index, $grid-columns)
+  if index > 0
+    if type == width
+      .col-{class}-{index}
+        width percentage(index, $grid-columns)
   if type == push
     .col-{class}-push-{index}
       left percentage(index, $grid-columns)
@@ -826,7 +829,7 @@ calc-grid(index, class, type)
 
 // Basic looping in Stylus (not sure if the ordering needs to be reversed, but I still did it this way)
 make-grid(columns, class, type)
-  for i in columns..1
+  for i in columns..0
     calc-grid(i, class, type)
 
 // Form validation states
