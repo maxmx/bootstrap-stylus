@@ -17,8 +17,10 @@
 // Docs: http://getbootstrap.com/getting-started/#browsers
 // Source: http://timkadlec.com/2012/10/ie10-snap-mode-and-responsive-design/
 
-@-ms-viewport {
-  width: device-width;
+@css {
+  @-ms-viewport {
+    width: device-width;
+  }
 }
 
 
@@ -46,7 +48,7 @@
   }
 }
 .visible-lg {
-  @media $media-screen-min-lg-desktop {
+  @media $media-min-lg-desktop {
     responsive-visibility();
   }
 }

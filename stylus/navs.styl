@@ -104,11 +104,6 @@
       }
     }
   }
-  // pulling this in mainly for less shorthand
-  &.nav-justified {
-    nav-justified();
-    nav-tabs-justified();
-  }
 }
 
 
@@ -198,10 +193,10 @@
   > .active > a,
   > .active > a:hover,
   > .active > a:focus {
-    border: 1px solid @nav-tabs-justified-link-border-color;
+    border: 1px solid $nav-tabs-justified-link-border-color;
   }
 
-  @media $media-screen-min-tablet {
+  @media $media-min-tablet {
     > li > a {
       border-bottom: 1px solid $nav-tabs-justified-link-border-color;
       border-radius: $border-radius-base $border-radius-base 0 0;
@@ -212,6 +207,12 @@
       border-bottom-color: $nav-tabs-justified-active-link-border-color;
     }
   }
+}
+
+// pulling this in mainly for less shorthand
+.nav-tabs.nav-justified {
+  @extend .nav-justified;
+  @extend .nav-tabs-justified;
 }
 
 
