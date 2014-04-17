@@ -8,7 +8,10 @@
 
 // Non supported LESS functions
 percentage(n1, n2)
-  unit((n1/n2)*100, "%")
+  if n1 == 0
+    0
+  else
+    unit((n1/n2)*100, "%")
 
 // Utilities
 // -------------------------
