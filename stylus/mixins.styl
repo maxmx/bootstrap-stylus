@@ -80,9 +80,13 @@ placeholder(color = $input-color-placeholder) {
 // Text overflow
 // Requires inline-block or block for proper styling
 text-overflow() {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  if arguments {
+    text-overflow: arguments;
+  } else {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
 }
 
 // CSS image replacement
