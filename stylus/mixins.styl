@@ -808,11 +808,13 @@ make-grid-columns()
 
 
 make-grid-col-float(class)
-  .col-{class}-1
-    float left
-  for i in 2..$grid-columns
+  $column-floating-{class} {
+    float: left
+  }
+
+  for i in 1..$grid-columns
     .col-{class}-{i}
-      @extend .col-{class}-1
+      @extend $column-floating-{class}
 
 
 calc-grid(index, class, type)
