@@ -42,7 +42,7 @@ When completed, you'll be able to run the various Grunt commands provided from t
 `grunt dist` creates the `/dist` directory with compiled files. **Uses [UglifyJS](http://lisperator.net/uglifyjs/).**
 
 #### Legacy 2.3.2 Theme - `grunt theme`
-This will compile the `theme.styl separately and output it to the `/dist` folder.
+This will compile the `theme.styl` separately and output it to the `/dist` folder.
 
 #### Watch - `grunt watch`
 This is a convenience method for watching just Stylus files and automatically building them whenever you save.
