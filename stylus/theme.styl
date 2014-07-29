@@ -30,7 +30,7 @@
 
 // Mixin for generating new styles
 btn-styles(btn-color = #555)
-  gradient-vertical(start-color = btn-color, end-color = darken(btn-color, 12%))
+  gradient-vertical(btn-color, darken(btn-color, 12%))
   reset-filter() // Disable gradients for IE9 because filter bleeds through rounded corners
   background-repeat repeat-x
   border-color darken(btn-color, 14%)
@@ -59,7 +59,9 @@ btn-styles(btn-color = #555)
 
 // Apply the mixin to the buttons
 .btn-default
-  btn-styles(btn-default-bg), text-shadow 0 1px 0 #fff border-color #ccc
+  btn-styles(btn-default-bg)
+  text-shadow 0 1px 0 #fff
+  border-color #ccc
 .btn-primary
   btn-styles(btn-primary-bg)
 .btn-success
@@ -89,12 +91,12 @@ btn-styles(btn-color = #555)
 
 .dropdown-menu > li > a:hover,
 .dropdown-menu > li > a:focus
-  gradient-vertical(start-color = dropdown-link-hover-bg, end-color = darken(dropdown-link-hover-bg, 5%))
+  gradient-vertical(dropdown-link-hover-bg, darken(dropdown-link-hover-bg, 5%))
   background-color darken(dropdown-link-hover-bg, 5%)
 .dropdown-menu > .active > a,
 .dropdown-menu > .active > a:hover,
 .dropdown-menu > .active > a:focus
-  gradient-vertical(start-color = dropdown-link-active-bg, end-color = darken(dropdown-link-active-bg, 5%))
+  gradient-vertical(dropdown-link-active-bg, darken(dropdown-link-active-bg, 5%))
   background-color darken(dropdown-link-active-bg, 5%)
 
 
@@ -105,14 +107,14 @@ btn-styles(btn-color = #555)
 
 // Default navbar
 .navbar-default
-  gradient-vertical(start-color = lighten(navbar-default-bg, 10%), end-color = navbar-default-bg)
+  gradient-vertical(lighten(navbar-default-bg, 10%), navbar-default-bg)
   reset-filter() // Remove gradient in IE<10 to fix bug where dropdowns don't get triggered
   border-radius navbar-border-radius
   shadow = inset 0 1px 0 rgba(255,255,255,.15), 0 1px 5px rgba(0,0,0,.075)
   box-shadow(shadow)
 
   .navbar-nav > .active > a
-    gradient-vertical(start-color = darken(navbar-default-bg, 5%), end-color = darken(navbar-default-bg, 2%))
+    gradient-vertical(darken(navbar-default-bg, 5%), darken(navbar-default-bg, 2%))
     box-shadow(inset 0 3px 9px rgba(0,0,0,.075))
 .navbar-brand,
 .navbar-nav > li > a
@@ -120,11 +122,11 @@ btn-styles(btn-color = #555)
 
 // Inverted navbar
 .navbar-inverse
-  gradient-vertical(start-color = lighten(navbar-inverse-bg, 10%), end-color = navbar-inverse-bg)
+  gradient-vertical(lighten(navbar-inverse-bg, 10%), navbar-inverse-bg)
   reset-filter() // Remove gradient in IE<10 to fix bug where dropdowns don't get triggered
 
   .navbar-nav > .active > a
-    gradient-vertical(start-color = navbar-inverse-bg, end-color = lighten(navbar-inverse-bg, 2.5%))
+    gradient-vertical(navbar-inverse-bg, lighten(navbar-inverse-bg, 2.5%))
     box-shadow(inset 0 3px 9px rgba(0,0,0,.25))
 
   .navbar-brand,
@@ -151,7 +153,7 @@ btn-styles(btn-color = #555)
 
 // Mixin for generating new styles
 alert-styles(color)
-  gradient-vertical(start-color = color, end-color = darken(color, 7.5%))
+  gradient-vertical(color, darken(color, 7.5%))
   border-color darken(color, 15%)
 
 // Apply the mixin to the alerts
@@ -172,11 +174,11 @@ alert-styles(color)
 
 // Give the progress background some depth
 .progress
-  gradient-vertical(start-color = darken(progress-bg, 4%), end-color = progress-bg)
+  gradient-vertical(darken(progress-bg, 4%), progress-bg)
 
 // Mixin for generating new styles
 progress-bar-styles(color)
-  gradient-vertical(start-color = color, end-color = darken(color, 10%))
+  gradient-vertical(color, darken(color, 10%))
 
 // Apply the mixin to the progress bars
 .progress-bar
@@ -207,7 +209,7 @@ progress-bar-styles(color)
 .list-group-item.active:hover,
 .list-group-item.active:focus
   text-shadow 0 -1px 0 darken(list-group-active-bg, 10%)
-  gradient-vertical(start-color = list-group-active-bg, end-color = darken(list-group-active-bg, 7.5%))
+  gradient-vertical(list-group-active-bg, darken(list-group-active-bg, 7.5%))
   border-color darken(list-group-active-border, 7.5%)
 
 
@@ -222,7 +224,7 @@ progress-bar-styles(color)
 
 // Mixin for generating new styles
 panel-heading-styles(color)
-  gradient-vertical(start-color = color, end-color = darken(color, 5%))
+  gradient-vertical(color, darken(color, 5%))
 
 // Apply the mixin to the panel headings only
 .panel-default > .panel-heading
@@ -245,7 +247,7 @@ panel-heading-styles(color)
 // --------------------------------------------------
 
 .well
-  gradient-vertical(start-color = darken(well-bg, 5%), end-color = well-bg)
+  gradient-vertical(darken(well-bg, 5%), well-bg)
   border-color darken(well-bg, 10%)
   shadow = inset 0 1px 3px rgba(0,0,0,.05), 0 1px 0 rgba(255,255,255,.1)
   box-shadow(shadow)
