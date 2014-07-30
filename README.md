@@ -1,9 +1,7 @@
-Bootstrap Stylus 3.1.1
+Bootstrap Stylus 3.2.0
 ======================
 
-Port of the amazing [Bootstrap 3.1.1](https://github.com/twbs/bootstrap) to [Stylus 0.44.0](http://learnboost.github.com/stylus/).
-
-This version removes the mixins and prefers [nib](https://github.com/visionmedia/nib).
+Port of the amazing [Bootstrap 3.2.0](https://github.com/twbs/bootstrap) to [Stylus 0.42.0](http://learnboost.github.com/stylus/).
 
 There might be some slight color differences due to the differences between the color functions in LESS and those in Stylus.
 
