@@ -13,13 +13,7 @@ module.exports = function(grunt) {
       options: {
         paths: ['stylus'],
         urlfunc: 'embedurl', // use embedurl('test.png') in our code to trigger Data URI embedding
-        use: [
-          require('nib')
-        ]
       },
-      import: [
-        'nib'
-      ],
       files: {
         'dist/bootstrap.css': 'stylus/bootstrap.styl' // 1:1 compile
       }
@@ -29,13 +23,7 @@ module.exports = function(grunt) {
       options: {
         paths: ['stylus'],
         urlfunc: 'embedurl',
-        use: [
-          require('nib')
-        ]
       },
-      import: [
-        'nib'
-      ],
       files: {
         'dist/theme.css': 'stylus/theme.styl' // 1:1 compile
       }
