@@ -15,7 +15,7 @@
   > .item
     display none
     position relative
-    transition(.6s ease-in-out left)
+    transition .6s ease-in-out left
 
     // Account for jankitude on images
     > img,
@@ -70,11 +70,11 @@
 
   // Set gradients for backgrounds
   &.left
-    gradient-horizontal(rgba(0,0,0,.5), rgba(0,0,0,.0001))
+    gradient-horizontal(rgba(0, 0, 0, .5), rgba(0, 0, 0, .0001))
   &.right
     left auto
     right 0
-    gradient-horizontal(rgba(0,0,0,.0001), rgba(0,0,0,.5))
+    gradient-horizontal(rgba(0, 0, 0, .0001), rgba(0, 0, 0, .5))
 
   // Hover/focus state
   &:hover,
@@ -151,7 +151,7 @@
     // For IE8, we set solid black as it doesn't support `rgba()`. For IE9, we
     // set alpha transparency for the best results possible.
     background-color unquote('#000 \9') // IE8
-    background-color rgba(0,0,0,0) // IE9
+    background-color rgba(0, 0, 0, 0) // IE9
   .active
     margin 0
     width 12px
