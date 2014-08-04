@@ -10,9 +10,9 @@
   height 0
   margin-left 2px
   vertical-align middle
-  border-top caret-width-base solid
-  border-right caret-width-base solid transparent
-  border-left caret-width-base solid transparent
+  border-top $caret-width-base solid
+  border-right $caret-width-base solid transparent
+  border-left $caret-width-base solid transparent
 
 // The dropdown wrapper (div)
 .dropdown
@@ -27,19 +27,19 @@
   position absolute
   top 100%
   left 0
-  z-index zindex-dropdown
+  z-index $zindex-dropdown
   display none // none by default, but block on "open" of the menu
   float left
   min-width 160px
   padding 5px 0
   margin 2px 0 0 // override default ul
   list-style none
-  font-size font-size-base
+  font-size $font-size-base
   text-align left // Ensures proper alignment if parent has it changed (e.g., modal footer)
-  background-color dropdown-bg
-  border 1px solid dropdown-fallback-border // IE8 fallback
-  border 1px solid dropdown-border
-  border-radius border-radius-base
+  background-color $dropdown-bg
+  border 1px solid $dropdown-fallback-border // IE8 fallback
+  border 1px solid $dropdown-border
+  border-radius $border-radius-base
   box-shadow 0 6px 12px rgba(0, 0, 0, .175)
   background-clip padding-box
 
@@ -52,7 +52,7 @@
 
   // Dividers (basically an hr) within the dropdown
   .divider
-    nav-divider(dropdown-divider-bg)
+    nav-divider($dropdown-divider-bg)
 
   // Links within the dropdown menu
   > li > a
@@ -60,8 +60,8 @@
     padding 3px 20px
     clear both
     font-weight normal
-    line-height line-height-base
-    color dropdown-link-color
+    line-height $line-height-base
+    color $dropdown-link-color
     white-space nowrap // prevent links from randomly breaking onto new lines
 
 // Hover/Focus state
@@ -69,18 +69,18 @@
   &:hover,
   &:focus
     text-decoration none
-    color dropdown-link-hover-color
-    background-color dropdown-link-hover-bg
+    color $dropdown-link-hover-color
+    background-color $dropdown-link-hover-bg
 
 // Active state
 .dropdown-menu > .active > a
   &,
   &:hover,
   &:focus
-    color dropdown-link-active-color
+    color $dropdown-link-active-color
     text-decoration none
     outline 0
-    background-color dropdown-link-active-bg
+    background-color $dropdown-link-active-bg
 
 // Disabled state
 //
@@ -90,7 +90,8 @@
   &,
   &:hover,
   &:focus
-    color dropdown-link-disabled-color
+    color $dropdown-link-disabled-color
+
 // Nuke hover/focus effects
 .dropdown-menu > .disabled > a
   &:hover,
@@ -118,6 +119,7 @@
 .dropdown-menu-right
   left auto // Reset the default from `.dropdown-menu`
   right 0
+
 // With v3, we enabled auto-flipping if you have a dropdown within a right
 // aligned nav component. To enable the undoing of that, we provide an override
 // to restore the default dropdown menu alignment.
@@ -132,9 +134,9 @@
 .dropdown-header
   display block
   padding 3px 20px
-  font-size font-size-small
-  line-height line-height-base
-  color dropdown-header-color
+  font-size $font-size-small
+  line-height $line-height-base
+  color $dropdown-header-color
   white-space nowrap // as with > li > a
 
 // Backdrop to catch body clicks on mobile, etc.
@@ -144,7 +146,7 @@
   right 0
   bottom 0
   top 0
-  z-index (zindex-dropdown - 10)
+  z-index ($zindex-dropdown - 10)
 
 // Right aligned dropdowns
 .pull-right > .dropdown-menu
@@ -161,7 +163,7 @@
   // Reverse the caret
   .caret
     border-top 0
-    border-bottom caret-width-base solid
+    border-bottom $caret-width-base solid
     content ""
   // Different positioning for bottom up menu
   .dropdown-menu
@@ -174,11 +176,12 @@
 //
 // Reiterate per navbar and the modified component alignment there.
 
-@media (min-width grid-float-breakpoint)
+@media (min-width $grid-float-breakpoint)
   .navbar-right
     .dropdown-menu
       right 0
       left auto
+
     // Necessary for overrides of the default right aligned menu.
     // Will remove come v4 in all likelihood.
     .dropdown-menu-left

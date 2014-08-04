@@ -3,9 +3,9 @@
   "version": "3.2.0",
   "devDependencies": {
     "grunt": "~0.4.2",
-    "stylus": "~0.42.0",
+    "stylus": "~0.47.0",
     "grunt-autoprefixer": "~0.8.2",
-    "grunt-contrib-stylus": "~0.13.2",
+    "grunt-contrib-stylus": "0.18.0",
     "grunt-contrib-watch": "~0.5.3",
     "grunt-contrib-cssmin": "~0.7.0",
     "grunt-contrib-clean": "~0.5.0",

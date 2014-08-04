@@ -4,7 +4,7 @@
 
 
 table
-  background-color table-bg
+  background-color $table-bg
 th
   text-align left
 
@@ -14,7 +14,8 @@ th
 .table
   width 100%
   max-width 100%
-  margin-bottom line-height-computed
+  margin-bottom $line-height-computed
+
   // Cells
   > thead,
   > tbody,
@@ -22,14 +23,16 @@ th
     > tr
       > th,
       > td
-        padding table-cell-padding
-        line-height line-height-base
+        padding $table-cell-padding
+        line-height $line-height-base
         vertical-align top
-        border-top 1px solid table-border-color
+        border-top 1px solid $table-border-color
+
   // Bottom align for column headings
   > thead > tr > th
     vertical-align bottom
-    border-bottom 2px solid table-border-color
+    border-bottom 2px solid $table-border-color
+
   // Remove top border from thead by default
   > caption + thead,
   > colgroup + thead,
@@ -38,13 +41,14 @@ th
       > th,
       > td
         border-top 0
+
   // Account for multiple tbody instances
   > tbody + tbody
-    border-top 2px solid table-border-color
+    border-top 2px solid $table-border-color
 
   // Nesting
   .table
-    background-color body-bg
+    background-color $body-bg
 
 
 // Condensed table w/ half padding
@@ -56,7 +60,7 @@ th
     > tr
       > th,
       > td
-        padding table-condensed-cell-padding
+        padding $table-condensed-cell-padding
 
 
 // Bordered version
@@ -64,14 +68,15 @@ th
 // Add borders all around the table and between all the columns.
 
 .table-bordered
-  border 1px solid table-border-color
+  border 1px solid $table-border-color
   > thead,
   > tbody,
   > tfoot
     > tr
       > th,
       > td
-        border 1px solid table-border-color
+        border 1px solid $table-border-color
+
   > thead > tr
     > th,
     > td
@@ -86,7 +91,7 @@ th
   > tbody > tr:nth-child(odd)
     > td,
     > th
-      background-color table-bg-accent
+      background-color $table-bg-accent
 
 
 // Hover effect
@@ -97,7 +102,7 @@ th
   > tbody > tr:hover
     > td,
     > th
-      background-color table-bg-hover
+      background-color $table-bg-hover
 
 
 // Table cell sizing
@@ -108,6 +113,7 @@ table col[class*="col-"]
   position static // Prevent border hiding in Firefox and IE9/10 (see https://github.com/twbs/bootstrap/issues/11623)
   float none
   display table-column
+
 table
   td,
   th
@@ -123,11 +129,11 @@ table
 // inheritance to nested tables.
 
 // Generate the contextual variants
-table-row-variant(active, table-bg-active)
-table-row-variant(success, state-success-bg)
-table-row-variant(info, state-info-bg)
-table-row-variant(warning, state-warning-bg)
-table-row-variant(danger, state-danger-bg)
+table-row-variant(active, $table-bg-active)
+table-row-variant(success, $state-success-bg)
+table-row-variant(info, $state-info-bg)
+table-row-variant(warning, $state-warning-bg)
+table-row-variant(danger, $state-danger-bg)
 
 
 // Responsive tables
@@ -137,13 +143,13 @@ table-row-variant(danger, state-danger-bg)
 // will display normally.
 
 .table-responsive
-  @media screen and (max-width screen-xs-max)
+  @media screen and (max-width $screen-xs-max)
     width 100%
-    margin-bottom (line-height-computed * .75)
+    margin-bottom ($line-height-computed * .75)
     overflow-y hidden
     overflow-x auto
     -ms-overflow-style -ms-autohiding-scrollbar
-    border 1px solid table-border-color
+    border 1px solid $table-border-color
     -webkit-overflow-scrolling touch
 
     // Tighten up spacing
@@ -171,6 +177,7 @@ table-row-variant(danger, state-danger-bg)
           > th:first-child,
           > td:first-child
             border-left 0
+
           > th:last-child,
           > td:last-child
             border-right 0

@@ -39,14 +39,18 @@
 
   > .next
     left 100%
+
   > .prev
     left -100%
+
   > .next.left,
+
   > .prev.right
     left 0
 
   > .active.left
     left -100%
+
   > .active.right
     left 100%
 
@@ -59,18 +63,19 @@
   top 0
   left 0
   bottom 0
-  width carousel-control-width
-  opacity(carousel-control-opacity)
-  font-size carousel-control-font-size
-  color carousel-control-color
+  width $carousel-control-width
+  opacity($carousel-control-opacity)
+  font-size $carousel-control-font-size
+  color $carousel-control-color
   text-align center
-  text-shadow carousel-text-shadow
+  text-shadow $carousel-text-shadow
   // We can't have this transition here because WebKit cancels the carousel
   // animation if you trip this while in the middle of another animation.
 
   // Set gradients for backgrounds
   &.left
     gradient-horizontal(rgba(0, 0, 0, .5), rgba(0, 0, 0, .0001))
+
   &.right
     left auto
     right 0
@@ -80,7 +85,7 @@
   &:hover,
   &:focus
     outline 0
-    color carousel-control-color
+    color $carousel-control-color
     text-decoration none
     opacity(.9)
 
@@ -93,14 +98,17 @@
     top 50%
     z-index 5
     display inline-block
+
   .icon-prev,
   .glyphicon-chevron-left
     left 50%
     margin-left -10px
+
   .icon-next,
   .glyphicon-chevron-right
     right 50%
     margin-right -10px
+
   .icon-prev,
   .icon-next
     width 20px
@@ -108,10 +116,10 @@
     margin-top -10px
     font-family serif
 
-
   .icon-prev
     &:before
       content '\2039'// SINGLE LEFT-POINTING ANGLE QUOTATION MARK (U+2039)
+
   .icon-next
     &:before
       content '\203a'// SINGLE RIGHT-POINTING ANGLE QUOTATION MARK (U+203A)
@@ -138,7 +146,7 @@
     height 10px
     margin 1px
     text-indent -999px
-    border 1px solid carousel-indicator-border-color
+    border 1px solid $carousel-indicator-border-color
     border-radius 10px
     cursor pointer
 
@@ -152,11 +160,12 @@
     // set alpha transparency for the best results possible.
     background-color unquote('#000 \9') // IE8
     background-color rgba(0, 0, 0, 0) // IE9
+
   .active
     margin 0
     width 12px
     height 12px
-    background-color carousel-indicator-active-bg
+    background-color $carousel-indicator-active-bg
 
 // Optional captions
 // -----------------------------
@@ -169,16 +178,16 @@
   z-index 10
   padding-top 20px
   padding-bottom 20px
-  color carousel-caption-color
+  color $carousel-caption-color
   text-align center
-  text-shadow carousel-text-shadow
+  text-shadow $carousel-text-shadow
+
   & .btn
     text-shadow none // No shadow for button elements in carousel-caption
 
 
 // Scale up controls for tablets and up
-@media screen and (min-width screen-sm-min)
-
+@media screen and (min-width $screen-sm-min)
   // Scale up the controls a smidge
   .carousel-control
     .glyphicon-chevron-left,
@@ -189,9 +198,11 @@
       height 30px
       margin-top -15px
       font-size 30px
+
     .glyphicon-chevron-left,
     .icon-prev
       margin-left -15px
+
     .glyphicon-chevron-right,
     .icon-next
       margin-right -15px

@@ -22,11 +22,11 @@ html
   -webkit-tap-highlight-color rgba(0, 0, 0, 0)
 
 body
-  font-family font-family-base
-  font-size font-size-base
-  line-height line-height-base
-  color text-color
-  background-color body-bg
+  font-family $font-family-base
+  font-size $font-size-base
+  line-height $line-height-base
+  color $text-color
+  background-color $body-bg
 
 // Reset fonts for relevant elements
 input,
@@ -41,12 +41,12 @@ textarea
 // Links
 
 a
-  color link-color
+  color $link-color
   text-decoration none
 
   &:hover,
   &:focus
-    color link-hover-color
+    color $link-hover-color
     text-decoration underline
 
   &:focus
@@ -73,17 +73,17 @@ img
 
 // Rounded corners
 .img-rounded
-  border-radius border-radius-large
+  border-radius $border-radius-large
 
 // Image thumbnails
 //
 // Heads up! This is mixin-ed into thumbnails for `.thumbnail`.
 .img-thumbnail
-  padding thumbnail-padding
-  line-height line-height-base
-  background-color thumbnail-bg
-  border 1px solid thumbnail-border
-  border-radius thumbnail-border-radius
+  padding $thumbnail-padding
+  line-height $line-height-base
+  background-color $thumbnail-bg
+  border 1px solid $thumbnail-border
+  border-radius $thumbnail-border-radius
   transition all .2s ease-in-out
 
   // Keep them at most 100% wide
@@ -97,10 +97,10 @@ img
 // Horizontal rules
 
 hr
-  margin-top line-height-computed
-  margin-bottom line-height-computed
+  margin-top $line-height-computed
+  margin-bottom $line-height-computed
   border 0
-  border-top 1px solid hr-border
+  border-top 1px solid $hr-border
 
 
 // Only display content to screen readers

@@ -6,12 +6,12 @@
 // Mixin and adjust the regular image class
 .thumbnail
   display block
-  padding thumbnail-padding
-  margin-bottom line-height-computed
-  line-height line-height-base
-  background-color thumbnail-bg
-  border 1px solid thumbnail-border
-  border-radius thumbnail-border-radius
+  padding $thumbnail-padding
+  margin-bottom $line-height-computed
+  line-height $line-height-base
+  background-color $thumbnail-bg
+  border 1px solid $thumbnail-border
+  border-radius $thumbnail-border-radius
   transition all .2s ease-in-out
 
   > img,
@@ -24,9 +24,9 @@
   a&:hover,
   a&:focus,
   a&.active
-    border-color link-color
+    border-color $link-color
 
   // Image captions
   .caption
-    padding thumbnail-caption-padding
-    color thumbnail-caption-color
+    padding $thumbnail-caption-padding
+    color $thumbnail-caption-color
