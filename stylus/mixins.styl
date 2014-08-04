@@ -2,11 +2,11 @@
 // --------------------------------------------------
 vendors = official
 
-percentage(n)
-  if n == 0
+percentage($n)
+  if $n == 0
     0
   else
-    unit(n * 100, "%")
+    unit($n * 100, "%")
 
 // Utilities
 @import "mixins/hide-text"
