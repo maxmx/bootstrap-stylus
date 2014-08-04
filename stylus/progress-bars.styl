@@ -28,10 +28,10 @@
 // Outer container
 .progress
   overflow hidden
-  height line-height-computed
-  margin-bottom line-height-computed
-  background-color progress-bg
-  border-radius border-radius-base
+  height $line-height-computed
+  margin-bottom $line-height-computed
+  background-color $progress-bg
+  border-radius $border-radius-base
   box-shadow inset 0 1px 2px rgba(0, 0, 0, .1)
 
 // Bar of progress
@@ -39,11 +39,11 @@
   float left
   width 0%
   height 100%
-  font-size font-size-small
-  line-height line-height-computed
-  color progress-bar-color
+  font-size $font-size-small
+  line-height $line-height-computed
+  color $progress-bar-color
   text-align center
-  background-color progress-bar-bg
+  background-color $progress-bar-bg
   box-shadow inset 0 -1px 0 rgba(0, 0, 0, .15)
   transition width .6s ease
 
@@ -72,7 +72,7 @@
     min-width 30px
 
   &[aria-valuenow="0"]
-    color gray-light
+    color $gray-light
     min-width 30px
     background-color transparent
     background-image none
@@ -84,13 +84,13 @@
 // -------------------------
 
 .progress-bar-success
-  progress-bar-variant(progress-bar-success-bg)
+  progress-bar-variant($progress-bar-success-bg)
 
 .progress-bar-info
-  progress-bar-variant(progress-bar-info-bg)
+  progress-bar-variant($progress-bar-info-bg)
 
 .progress-bar-warning
-  progress-bar-variant(progress-bar-warning-bg)
+  progress-bar-variant($progress-bar-warning-bg)
 
 .progress-bar-danger
-  progress-bar-variant(progress-bar-danger-bg)
+  progress-bar-variant($progress-bar-danger-bg)
