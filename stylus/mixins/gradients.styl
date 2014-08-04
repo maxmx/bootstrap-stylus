@@ -1,13 +1,13 @@
 // Gradients
-// hex(num)
-//   return base-convert(round(num), 16)
+hex(num)
+  return base-convert(round(num), 16)
 
-// argb(color)
-//   return s('#%s%s%s%s',
-//       hex(alpha(color) * 255),
-//       hex(red(color)),
-//       hex(green(color)),
-//       hex(blue(color)))
+argb(color)
+  return s('#%s%s%s%s',
+      hex(alpha(color) * 255),
+      hex(red(color)),
+      hex(green(color)),
+      hex(blue(color)))
 
 // Horizontal gradient, from left to right
 //
