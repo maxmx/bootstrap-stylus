@@ -3,7 +3,7 @@
 // Used only by Bootstrap to generate the correct number of grid $classes given
 // any value of `$grid-columns`.
 make-grid-columns()
-  .col
+  $col
     position relative
     // Prevent columns from collapsing when empty
     min-height 1px
@@ -14,15 +14,15 @@ make-grid-columns()
   // Common styles for all sizes of grid columns, widths 1-12
   for $index in 1..$grid-columns
     .col-xs-{$index}, .col-sm-{$index}, .col-md-{$index}, .col-lg-{$index}
-      @extend .col
+      @extend $col
 
 float-grid-columns($class)
-  .col
+  $col-float-{$class}
     float left
 
   for $index in 1..$grid-columns
     .col-{$class}-{$index}
-      @extend .col
+      @extend $col-float-{$class}
 
 calc-grid-column($index, $class, $type)
   if $type == width and $index > 0
@@ -42,7 +42,7 @@ calc-grid-column($index, $class, $type)
     else
       .col-{$class}-pull-{$index}
         right percentage(($index / $grid-columns))
-  else if $type == $offset
+  else if $type == offset
     .col-{$class}-offset-{$index}
       margin-left percentage(($index / $grid-columns))
 
