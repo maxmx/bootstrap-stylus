@@ -42,7 +42,7 @@ calc-grid-column($index, $class, $type)
     else
       .col-{$class}-pull-{$index}
         right percentage(($index / $grid-columns))
-  else if $type == $offset
+  else if $type == offset
     .col-{$class}-offset-{$index}
       margin-left percentage(($index / $grid-columns))
 
