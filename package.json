@@ -1,15 +1,15 @@
 {
   "name": "bootstrap-styl",
-  "version": "3.2.0",
+  "version": "3.3.0",
   "devDependencies": {
-    "grunt": "~0.4.2",
+    "grunt": "~0.4.5",
     "stylus": "~0.47.0",
-    "grunt-autoprefixer": "~0.8.2",
+    "grunt-autoprefixer": "~1.0.1",
     "grunt-contrib-stylus": "0.18.0",
-    "grunt-contrib-watch": "~0.5.3",
-    "grunt-contrib-cssmin": "~0.7.0",
-    "grunt-contrib-clean": "~0.5.0",
-    "grunt-contrib-uglify": "~0.3.2"
+    "grunt-contrib-watch": "~0.6.1",
+    "grunt-contrib-cssmin": "~0.10.0",
+    "grunt-contrib-clean": "~0.6.0",
+    "grunt-contrib-uglify": "~0.6.0"
   },
   "dependencies": {}
 }

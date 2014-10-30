@@ -35,7 +35,7 @@
         color $nav-disabled-link-hover-color
         text-decoration none
         background-color transparent
-        cursor not-allowed
+        cursor $cursor-disabled
 
   // Open dropdowns
   .open > a
@@ -191,9 +191,11 @@
 .tab-content
   > .tab-pane
     display none
+    visibility hidden
 
   > .active
     display block
+    visibility visible
 
 
 // Dropdowns
