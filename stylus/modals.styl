@@ -30,11 +30,11 @@
   // When fading in the modal, animate it to slide down
 
   &.fade .modal-dialog
-    transform translate3d(0, -25%, 0)
+    transform translate(0, -25%)
     transition transform 0.3s ease-out
 
   &.in .modal-dialog
-    transform translate3d(0, 0, 0)
+    transform translate(0, 0)
 
 .modal-open .modal
   overflow-x hidden
@@ -65,15 +65,14 @@
   right 0
   bottom 0
   left 0
-  z-index $zindex-modal-background
   background-color $modal-backdrop-bg
 
   // Fade for backdrop
   &.fade
-    opacity(0)
+    opacity-ie(0)
 
   &.in
-    opacity($modal-backdrop-opacity)
+    opacity-ie($modal-backdrop-opacity)
 
 // Modal header
 // Top section of the modal w/ title and dismiss

@@ -92,15 +92,14 @@
   &:focus
     color $dropdown-link-disabled-color
 
-// Nuke hover/focus effects
-.dropdown-menu > .disabled > a
+  // Nuke hover/focus effects
   &:hover,
   &:focus
     text-decoration none
     background-color transparent
     background-image none // Remove CSS gradient
     reset-filter()
-    cursor not-allowed
+    cursor $cursor-disabled
 
 // Open state for the dropdown
 .open
