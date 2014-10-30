@@ -82,10 +82,6 @@ small,
 .small
   font-size floor((100% * $font-size-small / $font-size-base))
 
-// Undo browser default styling
-cite
-  font-style normal
-
 mark,
 .mark
   background-color $state-warning-bg
@@ -292,11 +288,6 @@ blockquote.pull-right
       content ''
     &:after
       content '\00A0 \2014' // nbsp, em dash
-
-// Quotes
-blockquote:before,
-blockquote:after
-  content ""
 
 // Addresses
 address

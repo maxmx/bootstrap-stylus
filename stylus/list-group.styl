@@ -29,6 +29,7 @@
   // Round the first and last items
   &:first-child
     border-top-radius($list-group-border-radius)
+
   &:last-child
     margin-bottom 0
     border-bottom-radius($list-group-border-radius)
@@ -36,6 +37,7 @@
   // Align badges within list items
   > .badge
     float right
+
   > .badge + .badge
     margin-right 5px
 
@@ -65,7 +67,7 @@ a.list-group-item
   &.disabled:focus
     background-color $list-group-disabled-bg
     color $list-group-disabled-color
-    cursor not-allowed
+    cursor $cursor-disabled
 
     // Force color to inherit for custom content
     .list-group-item-heading

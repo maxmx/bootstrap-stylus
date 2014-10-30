@@ -131,7 +131,7 @@ output
   &[disabled],
   &[readonly],
   fieldset[disabled] &
-    cursor not-allowed
+    cursor $cursor-disabled
     background-color $input-bg-disabled
     opacity 1 // iOS fix for unreadable disabled content
 
@@ -169,9 +169,24 @@ input[type="month"]
 
   &.input-sm
     line-height $input-height-small
+    line-height $line-height-small unquote('\0')
 
   &.input-lg
     line-height $input-height-large
+    line-height $line-height-large unquote('\0')
+
+// IE 11 hack to reverse the iOS temporal input hack.
+_:-ms-fullscreen, :root input[type="date"],
+_:-ms-fullscreen, :root input[type="time"],
+_:-ms-fullscreen, :root input[type="datetime-local"],
+_:-ms-fullscreen, :root input[type="month"]
+  line-height $line-height-base
+
+  &.input-sm
+    line-height $line-height-small
+
+  &.input-lg
+    line-height $line-height-large
 
 
 // Form groups
@@ -191,11 +206,11 @@ input[type="month"]
 .checkbox
   position relative
   display block
-  min-height $line-height-computed // clear the floating input if there is no label text
   margin-top 10px
   margin-bottom 10px
 
   label
+    min-height $line-height-computed // Ensure the input doesn't jump when there is no text
     padding-left 20px
     margin-bottom 0
     font-weight normal
@@ -237,14 +252,14 @@ input[type="checkbox"]
   &[disabled],
   &.disabled,
   fieldset[disabled] &
-    cursor not-allowed
+    cursor $cursor-disabled
 
 // These classes are used directly on <label>s
 .radio-inline,
 .checkbox-inline
   &.disabled,
   fieldset[disabled] &
-    cursor not-allowed
+    cursor $cursor-disabled
 
 // These classes are used on elements with <label> descendants
 .radio,
@@ -252,7 +267,7 @@ input[type="checkbox"]
   &.disabled,
   fieldset[disabled] &
     label
-      cursor not-allowed
+      cursor $cursor-disabled
 
 
 // Static form control text
@@ -278,10 +293,12 @@ input[type="checkbox"]
 // Build on `.form-control` with modifier classes to decrease or increase the
 // height and font-size of form controls.
 
-.input-sm
+.input-sm,
+.form-group-sm .form-control
   input-size($input-height-small, $padding-small-vertical, $padding-small-horizontal, $font-size-small, $line-height-small, $border-radius-small)
 
 .input-lg
+.form-group-lg .form-control
   input-size($input-height-large, $padding-large-vertical, $padding-large-horizontal, $font-size-large, $line-height-large, $border-radius-large)
 
 
@@ -300,7 +317,7 @@ input[type="checkbox"]
 // Feedback icon (requires .glyphicon classes)
 .form-control-feedback
   position absolute
-  top ($line-height-computed + 5) // Height of the `label` and its margin
+  top 0
   right 0
   z-index 2 // Ensure icon is above input groups
   display block
@@ -308,6 +325,7 @@ input[type="checkbox"]
   height $input-height-base
   line-height $input-height-base
   text-align center
+  pointer-events none
 
 .input-lg + .form-control-feedback
   width $input-height-large
@@ -328,9 +346,13 @@ input[type="checkbox"]
   form-control-validation($state-danger-text, $state-danger-text, $state-danger-bg)
 
 
-// Reposition feedback icon if label is hidden with "screenreader only" state
-.has-feedback label.sr-only ~ .form-control-feedback
-  top 0
+// Reposition feedback icon if input has visible label above
+.has-feedback label
+  &  ~ .form-control-feedback
+    top ($line-height-computed + 5) // Height of the `label` and its margin
+
+  &.sr-only ~ .form-control-feedback
+    top 0
 
 
 // Help text
@@ -373,6 +395,10 @@ input[type="checkbox"]
       width auto // Prevent labels from stacking above inputs in `.form-group`
       vertical-align middle
 
+    // Make static controls behave like regular ones
+    .form-control-static
+      display inline-block
+
     .input-group
       display inline-table
       vertical-align middle
@@ -407,10 +433,7 @@ input[type="checkbox"]
       position relative
       margin-left 0
 
-    // Validation states
-    //
-    // Reposition the icon because it's now within a grid column and columns have
-    // `position relative` on them. Also accounts for the grid gutter padding.
+    // Re-override the feedback icon.
     .has-feedback .form-control-feedback
       top 0
 
@@ -455,7 +478,6 @@ input[type="checkbox"]
   // Reposition the icon because it's now within a grid column and columns have
   // `position relative` on them. Also accounts for the grid gutter padding.
   .has-feedback .form-control-feedback
-    top 0
     right ($grid-gutter-width / 2)
 
   // Form group sizes
@@ -466,9 +488,6 @@ input[type="checkbox"]
     @media (min-width $screen-sm-min)
       .control-label
         padding-top (($padding-large-vertical * $line-height-large) + 1)
-
-    .form-control
-      @extend .input-lg
 
   .form-group-sm
     @media (min-width $screen-sm-min)

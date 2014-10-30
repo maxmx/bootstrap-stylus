@@ -4,7 +4,7 @@
 
 // Heads up!
 //
-// We don't use the `opacity()` mixin here since it causes a bug with text
+// We don't use the `opacity-ie()` mixin here since it causes a bug with text
 // fields in IE7-8. Source https://github.com/twbs/bootstrap/pull/3552.
 
 .fade
@@ -16,9 +16,11 @@
 
 .collapse
   display none
+  visibility hidden
 
   &.in
     display block
+    visibility visible
 
   tr&.in
     display table-row
@@ -30,4 +32,6 @@
   position relative
   height 0
   overflow hidden
-  transition height .35s ease
+  transition-property height, visibility
+  transition-duration .35s
+  transition-timing-function ease
