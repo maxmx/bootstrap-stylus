@@ -49,6 +49,10 @@ This is a convenience method for watching just Stylus files and automatically bu
 
 Should you encounter problems with installing dependencies or running Grunt commands, uninstall all previous dependency versions (global and local). Then, rerun `npm install`.
 
+### Usage
+You may select what components you want to exclude by commenting them out of `stylus/bootstrap.styl` file.
+You may customize the [bootstrap variables](http://getbootstrap.com/customize/#less-variables) by editing `stylus/variables.styl` file.
+
 
 ## Original Authors
 
