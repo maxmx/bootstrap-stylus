@@ -49,6 +49,16 @@ This is a convenience method for watching just Stylus files and automatically bu
 
 Should you encounter problems with installing dependencies or running Grunt commands, uninstall all previous dependency versions (global and local). Then, rerun `npm install`.
 
+### Usage
+You may select what components you want to include by editing `stylus/bootstrap.styl`.
+You may override [bootstrap variables](http://getbootstrap.com/customize/#less-variables) in your private code, for example
+```
+// myStyles.styl
+$font-family-serif ?=      'Merriweather', serif
+$font-family-base  ?=       $font-family-serif
+@import "bower_components/bootstrap-stylus/stylus/bootstrap.styl" // Or wherever your bootstrap.styl is located
+```
+this allows flexibility for easily updating to new bootstrap versions. See  [?=](https://learnboost.github.io/stylus/docs/operators.html#conditional-assignment--).
 
 ## Original Authors
 
