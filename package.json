@@ -1,6 +1,6 @@
 {
   "name": "bootstrap-styl",
-  "version": "3.3.0",
+  "version": "3.3.1",
   "devDependencies": {
     "grunt": "~0.4.5",
     "stylus": "~0.47.0",
