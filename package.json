@@ -11,5 +11,6 @@
     "grunt-contrib-clean": "~0.6.0",
     "grunt-contrib-uglify": "~0.6.0"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "main": "index.js"
 }
