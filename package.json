@@ -1,6 +1,17 @@
 {
   "name": "bootstrap-styl",
+  "description": "Port of the amazing Bootstrap 3 to Stylus",
   "version": "3.3.1",
+  "main": "index.js",
+  "keywords": [
+    "bootstrap",
+    "stylus"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Acquisio/bootstrap-stylus.git"
+  },
+  "dependencies": {},
   "devDependencies": {
     "grunt": "~0.4.5",
     "stylus": "~0.47.0",
@@ -10,6 +21,5 @@
     "grunt-contrib-cssmin": "~0.10.0",
     "grunt-contrib-clean": "~0.6.0",
     "grunt-contrib-uglify": "~0.6.0"
-  },
-  "dependencies": {}
+  }
 }
