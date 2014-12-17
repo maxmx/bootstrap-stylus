@@ -15,7 +15,7 @@ module.exports = function(grunt) {
         urlfunc: 'embedurl', // use embedurl('test.png') in our code to trigger Data URI embedding
       },
       files: {
-        'dist/bootstrap.css': 'stylus/bootstrap.styl' // 1:1 compile
+        'dist/bootstrap.css': 'bootstrap/index.styl' // 1:1 compile
       }
     },
 
@@ -25,14 +25,14 @@ module.exports = function(grunt) {
         urlfunc: 'embedurl',
       },
       files: {
-        'dist/theme.css': 'stylus/theme.styl' // 1:1 compile
+        'dist/theme.css': 'bootstrap/theme.styl' // 1:1 compile
       }
     }
   },
 
   watch: {
     css: {
-      files: 'stylus/*.styl',
+      files: 'bootstrap/**/*.styl',
       tasks: ['stylus'],
       options: {
         debounceDelay: 250
