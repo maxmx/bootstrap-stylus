@@ -1,11 +1,11 @@
 {
   "name": "bootstrap-styl",
-  "description": "Port of the amazing Bootstrap 3 to Stylus",
+  "description": "Port of the amazing Bootstrap 3.3.1 to Stylus",
   "keywords": [
     "bootstrap",
     "stylus"
   ],
-  "version": "3.3.1",
+  "version": "4.0.0",
   "devDependencies": {
     "grunt": "~0.4.5",
     "stylus": "~0.47.0",
