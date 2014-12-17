@@ -7,6 +7,12 @@ There might be some slight color differences due to the differences between the 
 
 ## Installing
 
+Via npm:
+
+```
+$ npm install bootstrap-styl
+```
+
 Latest version via [Bower](https://github.com/bower/bower):
 
 ```
@@ -18,6 +24,29 @@ Legacy 2.3.2 version is kept in [this release](https://github.com/Acquisio/boots
 ```
 $ bower install bootstrap-stylus#2.3.2
 ```
+
+## Compiling with Stylus use()
+You can require Bootstrap Stylus using something similar to the following depending on your setup:
+
+```
+var bootstrap = require('bootstrap-styl'),
+	stylus    = require('stylus');
+
+stylus({ use: bootstrap() });
+
+```
+From within your main stylus file you can now simply include the whole library or the relevant sections.
+
+````
+@import 'bootstrap/bootstrap'
+
+// or individual components
+
+@import 'bootstrap/variables'
+@import 'bootstrap/mixins'
+@import 'bootstrap/badges'
+````
+
 
 ## Compiling CSS from Stylus
 
