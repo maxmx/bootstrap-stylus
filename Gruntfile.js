@@ -11,28 +11,28 @@ module.exports = function(grunt) {
   stylus: {
     bootstrap: {
       options: {
-        paths: ['stylus'],
+        paths: ['bootstrap-stylus/bootstrap'],
         urlfunc: 'embedurl', // use embedurl('test.png') in our code to trigger Data URI embedding
       },
       files: {
-        'dist/bootstrap.css': 'stylus/bootstrap.styl' // 1:1 compile
+        'dist/bootstrap.css': 'bootstrap-stylus/bootstrap/bootstrap.styl' // 1:1 compile
       }
     },
 
     theme: {
       options: {
-        paths: ['stylus'],
+        paths: ['bootstrap-stylus/bootstrap'],
         urlfunc: 'embedurl',
       },
       files: {
-        'dist/theme.css': 'stylus/theme.styl' // 1:1 compile
+        'dist/theme.css': 'bootstrap-stylus/bootstrap/theme.styl' // 1:1 compile
       }
     }
   },
 
   watch: {
     css: {
-      files: 'stylus/*.styl',
+      files: 'bootstrap-stylus/bootstrap/**/*.styl',
       tasks: ['stylus'],
       options: {
         debounceDelay: 250
