@@ -1,5 +1,10 @@
 {
   "name": "bootstrap-styl",
+  "description": "Port of the amazing Bootstrap 3 to Stylus",
+  "keywords": [
+    "bootstrap",
+    "stylus"
+  ],
   "version": "3.3.1",
   "devDependencies": {
     "grunt": "~0.4.5",
@@ -11,5 +16,6 @@
     "grunt-contrib-clean": "~0.6.0",
     "grunt-contrib-uglify": "~0.6.0"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "main": "index.js"
 }

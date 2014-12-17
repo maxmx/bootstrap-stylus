@@ -9,14 +9,43 @@ There might be some slight color differences due to the differences between the 
 
 Latest version via [Bower](https://github.com/bower/bower):
 
-```
+```bash
 $ bower install bootstrap-stylus
 ```
 
 Legacy 2.3.2 version is kept in [this release](https://github.com/Acquisio/bootstrap-stylus/releases/tag/v2.3.2) and can be installed via Bower as well, however it does not include any build scripts.
 
-```
+```bash
 $ bower install bootstrap-stylus#2.3.2
+```
+
+Via npm:
+
+```bash
+$ npm install bootstrap-styl
+```
+Example of requiring and using bootstrap middleware to create compile function to utilize in other frameworks.
+```javascript
+var bootstrap = require('bootstrap-styl'),
+    stylus    = require('stylus');
+
+function compile(str) {
+  return stylus(str)
+    .use(bootstrap());
+}
+```
+
+To import whole bootstrap in your stylus file:
+```stylus
+@import bootstrap
+```
+
+Alternatively to import individual components:
+```stylus
+@import 'bootstrap/alerts'
+@import 'bootstrap/variables'
+@import 'bootstrap/mixins'
+
 ```
 
 ## Compiling CSS from Stylus
