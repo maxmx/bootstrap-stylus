@@ -284,6 +284,7 @@
   border-top-radius(0)
 // Menu position and menu caret support for dropups via extra dropup class
 .navbar-fixed-bottom .navbar-nav > li > .dropdown-menu
+  margin-bottom 0
   border-top-radius($navbar-border-radius)
   border-bottom-radius(0)
 
@@ -324,10 +325,10 @@
 
 @media (min-width $grid-float-breakpoint)
   .navbar-left
-    @extends .pull-left
+    float left !important
 
   .navbar-right
-    @extends .pull-right
+    float right !important
     margin-right -($navbar-padding-horizontal)
 
     ~ .navbar-right

@@ -1,3 +1,8 @@
+/*!
+ * Bootstrap v3.3.2 (http://getbootstrap.com)
+ * Copyright 2011-2015 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
 
 //
 // Load core variables and mixins
@@ -32,7 +37,7 @@
 // Mixin for generating new styles
 btn-styles($btn-color = #555)
   gradient-vertical($btn-color, darken($btn-color, 12%))
-  reset-filter() // Disable gradients for IE9 because filter bleeds through rounded corners
+  reset-filter() // Disable gradients for IE9 because filter bleeds through rounded corners; see https://github.com/twbs/bootstrap/issues/10620
   background-repeat repeat-x
   border-color darken($btn-color, 14%)
 
@@ -46,6 +51,7 @@ btn-styles($btn-color = #555)
     background-color darken($btn-color, 12%)
     border-color darken($btn-color, 14%)
 
+  &.disabled,
   &:disabled,
   &[disabled]
     background-color darken($btn-color, 12%)

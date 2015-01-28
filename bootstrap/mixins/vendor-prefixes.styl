@@ -46,10 +46,10 @@
 // Prevent browsers from flickering when using CSS 3D transforms.
 // Default value is `visible`, but can be changed to `hidden`
 
-// backface-visibility($visibility)
-//   -webkit-backface-visibility $visibility
-//   -moz-backface-visibility $visibility
-//   backface-visibility $visibility
+backface-visibility($visibility)
+  -webkit-backface-visibility $visibility
+  -moz-backface-visibility $visibility
+  backface-visibility $visibility
 
 // Drop shadows
 //
@@ -88,7 +88,7 @@
 placeholder($color = $input-color-placeholder)
   &::-moz-placeholder // Firefox
     color $color
-    opacity 1 // See https//github.com/twbs/bootstrap/pull/11526
+    opacity 1 // Override Firefox's unusual default opacity; See https//github.com/twbs/bootstrap/pull/11526
   &:-ms-input-placeholder // Internet Explorer 10+
     color $color
   &::-webkit-input-placeholder // Safari and Chrome
@@ -138,10 +138,10 @@ placeholder($color = $input-color-placeholder)
 //   -ms-transform s("rotateY(%s)", $degrees) // IE9 only
 //   -o-transform s("rotateY(%s)", $degrees)
 //   transform s("rotateY(%s)", $degrees)
-// perspective($perspective)
-//   -webkit-perspective $perspective
-//   -moz-perspective $perspective
-//   perspective $perspective
+perspective($perspective)
+  -webkit-perspective $perspective
+  // -moz-perspective $perspective
+  perspective $perspective
 // perspective-origin($perspective)
 //   -webkit-perspective-origin $perspective
 //   -moz-perspective-origin $perspective
@@ -171,11 +171,11 @@ placeholder($color = $input-color-placeholder)
 // transition-timing-function($timing-function)
 //   -webkit-transition-timing-function $timing-function
 //   transition-timing-function $timing-function
-// transition-transform($transition)
-//   -webkit-transition -webkit-transform $transition
-//   -moz-transition -moz-transform $transition
-//   -o-transition -o-transform $transition
-//   transition transform $transition
+transition-transform($transition)
+  -webkit-transition -webkit-transform $transition
+  -moz-transition -moz-transform $transition
+  -o-transition -o-transform $transition
+  transition transform $transition
 
 
 // User select

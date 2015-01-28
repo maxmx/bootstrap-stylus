@@ -1,20 +1,20 @@
 {
   "name": "bootstrap-styl",
-  "description": "Port of the amazing Bootstrap 3.3.1 to Stylus",
+  "description": "Port of the amazing Bootstrap 3.3.2 to Stylus",
   "keywords": [
     "bootstrap",
     "stylus"
   ],
-  "version": "4.0.1",
+  "version": "4.0.2",
   "devDependencies": {
     "grunt": "~0.4.5",
     "stylus": "~0.47.0",
-    "grunt-autoprefixer": "~1.0.1",
+    "grunt-autoprefixer": "~2.2.0",
     "grunt-contrib-stylus": "0.18.0",
     "grunt-contrib-watch": "~0.6.1",
-    "grunt-contrib-cssmin": "~0.10.0",
+    "grunt-contrib-cssmin": "~0.11.0",
     "grunt-contrib-clean": "~0.6.0",
-    "grunt-contrib-uglify": "~0.6.0"
+    "grunt-contrib-uglify": "~0.7.0"
   },
   "dependencies": {},
   "main": "index.js"
