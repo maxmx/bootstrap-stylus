@@ -1,6 +1,10 @@
 {
   "name": "bootstrap-styl",
   "description": "Port of the amazing Bootstrap 3.3.2 to Stylus",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/maxmx/bootstrap-stylus.git"
+  },
   "keywords": [
     "bootstrap",
     "stylus"
