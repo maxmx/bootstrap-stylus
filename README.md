@@ -42,9 +42,9 @@ To import whole bootstrap in your stylus file:
 
 Alternatively to import individual components:
 ```stylus
-@import 'bootstrap/alerts'
 @import 'bootstrap/variables'
 @import 'bootstrap/mixins'
+@import 'bootstrap/alerts'
 
 ```
 
