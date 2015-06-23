@@ -29,7 +29,7 @@
 .panel-title
   margin-top 0
   margin-bottom 0
-  font-size ceil(($font-size-base * 1.125))
+  font-size ceil($font-size-base * 1.125)
   color inherit
 
   > a,
@@ -72,6 +72,10 @@
       .list-group-item:last-child
         border-bottom 0
         border-bottom-radius(($panel-border-radius - 1))
+
+  > .panel-heading + .panel-collapse > .list-group
+    .list-group-item:first-child
+      border-top-radius 0
 
 // Collapse space between when there's no additional content.
 .panel-heading + .list-group
