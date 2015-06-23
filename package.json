@@ -1,6 +1,6 @@
 {
   "name": "bootstrap-styl",
-  "description": "Port of the amazing Bootstrap 3.3.4 to Stylus",
+  "description": "Port of the amazing Bootstrap 3.3.5 to Stylus",
   "repository": {
     "type": "git",
     "url": "http://github.com/maxmx/bootstrap-stylus.git"
@@ -9,16 +9,16 @@
     "bootstrap",
     "stylus"
   ],
-  "version": "4.0.4",
+  "version": "4.0.5",
   "devDependencies": {
     "grunt": "~0.4.5",
     "stylus": "~0.47.0",
-    "grunt-autoprefixer": "~2.2.0",
+    "grunt-autoprefixer": "~3.0.0",
     "grunt-contrib-stylus": "0.18.0",
     "grunt-contrib-watch": "~0.6.1",
-    "grunt-contrib-cssmin": "~0.12.2",
+    "grunt-contrib-cssmin": "~0.12.3",
     "grunt-contrib-clean": "~0.6.0",
-    "grunt-contrib-uglify": "~0.8.0"
+    "grunt-contrib-uglify": "~0.9.1"
   },
   "dependencies": {},
   "main": "index.js"
