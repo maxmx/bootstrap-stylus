@@ -41,20 +41,20 @@
 
 // Mixin for generating new styles
 btn-styles($btn-color = #555)
-  gradient-vertical($btn-color, darken($btn-color, 12%))
+  gradient-vertical($btn-color, darken($btn-color, 12))
   reset-filter() // Disable gradients for IE9 because filter bleeds through rounded corners; see https://github.com/twbs/bootstrap/issues/10620
   background-repeat repeat-x
-  border-color darken($btn-color, 14%)
+  border-color darken($btn-color, 14)
 
   &:hover,
   &:focus
-    background-color darken($btn-color, 12%)
+    background-color darken($btn-color, 12)
     background-position 0 -15px
 
   &:active,
   &.active
-    background-color darken($btn-color, 12%)
-    border-color darken($btn-color, 14%)
+    background-color darken($btn-color, 12)
+    border-color darken($btn-color, 14)
 
   &.disabled,
   &[disabled],
@@ -65,7 +65,7 @@ btn-styles($btn-color = #555)
     &.focus,
     &:active
     &.active
-      background-color darken($btn-color, 12%)
+      background-color darken($btn-color, 12)
       background-image none
 
 // Common styles
@@ -112,14 +112,14 @@ btn-styles($btn-color = #555)
 
 .dropdown-menu > li > a:hover,
 .dropdown-menu > li > a:focus
-  gradient-vertical($dropdown-link-hover-bg, darken($dropdown-link-hover-bg, 5%))
-  background-color darken($dropdown-link-hover-bg, 5%)
+  gradient-vertical($dropdown-link-hover-bg, darken($dropdown-link-hover-bg, 5))
+  background-color darken($dropdown-link-hover-bg, 5)
 
 .dropdown-menu > .active > a,
 .dropdown-menu > .active > a:hover,
 .dropdown-menu > .active > a:focus
-  gradient-vertical($dropdown-link-active-bg, darken($dropdown-link-active-bg, 5%))
-  background-color darken($dropdown-link-active-bg, 5%)
+  gradient-vertical($dropdown-link-active-bg, darken($dropdown-link-active-bg, 5))
+  background-color darken($dropdown-link-active-bg, 5)
 
 
 //
@@ -128,14 +128,14 @@ btn-styles($btn-color = #555)
 
 // Default navbar
 .navbar-default
-  gradient-vertical(lighten($navbar-default-bg, 10%), $navbar-default-bg)
+  gradient-vertical(lighten($navbar-default-bg, 10), $navbar-default-bg)
   reset-filter() // Remove gradient in IE<10 to fix bug where dropdowns don't get triggered
   border-radius $navbar-border-radius
   box-shadow inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 5px rgba(0, 0, 0, .075)
 
   .navbar-nav > .open > a,
   .navbar-nav > .active > a
-    gradient-vertical(darken($navbar-default-link-active-bg, 5%), darken($navbar-default-link-active-bg, 2%))
+    gradient-vertical(darken($navbar-default-link-active-bg, 5), darken($navbar-default-link-active-bg, 2))
     box-shadow inset 0 3px 9px rgba(0, 0, 0, .075)
 
 .navbar-brand,
@@ -144,13 +144,13 @@ btn-styles($btn-color = #555)
 
 // Inverted navbar
 .navbar-inverse
-  gradient-vertical(lighten($navbar-inverse-bg, 10%), $navbar-inverse-bg)
+  gradient-vertical(lighten($navbar-inverse-bg, 10), $navbar-inverse-bg)
   reset-filter() // Remove gradient in IE<10 to fix bug where dropdowns don't get triggered
   border-radius $navbar-border-radius
 
   .navbar-nav > .open > a,
   .navbar-nav > .active > a
-    gradient-vertical($navbar-inverse-link-active-bg, lighten($navbar-inverse-link-active-bg, 2.5%))
+    gradient-vertical($navbar-inverse-link-active-bg, lighten($navbar-inverse-link-active-bg, 2.5))
     box-shadow inset 0 3px 9px rgba(0, 0, 0, .25)
 
   .navbar-brand,
@@ -170,7 +170,7 @@ btn-styles($btn-color = #555)
     &:hover,
     &:focus
       color #fff
-      gradient-vertical($dropdown-link-active-bg, darken($dropdown-link-active-bg, 5%))
+      gradient-vertical($dropdown-link-active-bg, darken($dropdown-link-active-bg, 5))
 
 
 //
@@ -184,8 +184,8 @@ btn-styles($btn-color = #555)
 
 // Mixin for generating new styles
 alert-styles($color)
-  gradient-vertical($color, darken($color, 7.5%))
-  border-color darken($color, 15%)
+  gradient-vertical($color, darken($color, 7.5))
+  border-color darken($color, 15)
 
 // Apply the mixin to the alerts
 .alert-success
@@ -207,11 +207,11 @@ alert-styles($color)
 
 // Give the progress background some depth
 .progress
-  gradient-vertical(darken($progress-bg, 4%), $progress-bg)
+  gradient-vertical(darken($progress-bg, 4), $progress-bg)
 
 // Mixin for generating new styles
 progress-bar-styles($color)
-  gradient-vertical($color, darken($color, 10%))
+  gradient-vertical($color, darken($color, 10))
 
 // Apply the mixin to the progress bars
 .progress-bar
@@ -246,9 +246,9 @@ progress-bar-styles($color)
 .list-group-item.active,
 .list-group-item.active:hover,
 .list-group-item.active:focus
-  text-shadow 0 -1px 0 darken($list-group-active-bg, 10%)
-  gradient-vertical($list-group-active-bg, darken($list-group-active-bg, 7.5%))
-  border-color darken($list-group-active-border, 7.5%)
+  text-shadow 0 -1px 0 darken($list-group-active-bg, 10)
+  gradient-vertical($list-group-active-bg, darken($list-group-active-bg, 7.5))
+  border-color darken($list-group-active-border, 7.5)
 
   .badge
     text-shadow none
@@ -264,7 +264,7 @@ progress-bar-styles($color)
 
 // Mixin for generating new styles
 panel-heading-styles($color)
-  gradient-vertical($color, darken($color, 5%))
+  gradient-vertical($color, darken($color, 5))
 
 // Apply the mixin to the panel headings only
 .panel-default > .panel-heading
@@ -291,6 +291,6 @@ panel-heading-styles($color)
 // --------------------------------------------------
 
 .well
-  gradient-vertical(darken($well-bg, 5%), $well-bg)
-  border-color darken($well-bg, 10%)
+  gradient-vertical(darken($well-bg, 5), $well-bg)
+  border-color darken($well-bg, 10)
   box-shadow inset 0 1px 3px rgba(0, 0, 0, .05), 0 1px 0 rgba(255, 255, 255, .1)

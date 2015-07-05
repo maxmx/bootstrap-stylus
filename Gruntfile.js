@@ -9,21 +9,18 @@ module.exports = function(grunt) {
   grunt.initConfig({
 
   stylus: {
+    options: {
+      compress: false,
+      paths: ['stylus'],
+      urlfunc: 'embedurl', // use embedurl('test.png') in our code to trigger Data URI embedding
+    },
     bootstrap: {
-      options: {
-        paths: ['stylus'],
-        urlfunc: 'embedurl', // use embedurl('test.png') in our code to trigger Data URI embedding
-      },
       files: {
         'dist/bootstrap.css': 'bootstrap/index.styl' // 1:1 compile
       }
     },
 
     theme: {
-      options: {
-        paths: ['stylus'],
-        urlfunc: 'embedurl',
-      },
       files: {
         'dist/theme.css': 'bootstrap/theme.styl' // 1:1 compile
       }

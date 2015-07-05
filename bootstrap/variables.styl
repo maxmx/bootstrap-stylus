@@ -8,13 +8,13 @@
 //## Gray and brand colors for use across Bootstrap.
 
 $gray-base ?=           #000
-$gray-darker ?=         lighten($gray-base, 13.5%) // #222
-$gray-dark ?=           lighten($gray-base, 20%)   // #333
-$gray ?=                lighten($gray-base, 33.5%) // #555
-$gray-light ?=          lighten($gray-base, 46.7%) // #777
-$gray-lighter ?=        lighten($gray-base, 93.5%) // #eee
+$gray-darker ?=         lighten($gray-base, 13.5) // #222
+$gray-dark ?=           lighten($gray-base, 20)   // #333
+$gray ?=                lighten($gray-base, 33.5) // #555
+$gray-light ?=          lighten($gray-base, 46.7) // #777
+$gray-lighter ?=        lighten($gray-base, 93.5) // #eee
 
-$brand-primary ?=       darken(#428bca, 6.5%) // #337ab7
+$brand-primary ?=       darken(#428bca, 6.5) // #337ab7
 $brand-success ?=       #5cb85c
 $brand-info ?=          #5bc0de
 $brand-warning ?=       #f0ad4e
@@ -33,7 +33,7 @@ $text-color ?=            $gray-dark
 //** Global textual link color.
 $link-color ?=            $brand-primary
 //** Link hover color set via `darken()` function.
-$link-hover-color ?=      darken($link-color, 15%)
+$link-hover-color ?=      darken($link-color, 15)
 //** Link hover decoration.
 $link-hover-decoration ?= underline
 
@@ -150,23 +150,23 @@ $btn-default-border ?=           #ccc
 
 $btn-primary-color ?=            #fff
 $btn-primary-bg ?=               $brand-primary
-$btn-primary-border ?=           darken($btn-primary-bg, 5%)
+$btn-primary-border ?=           darken($btn-primary-bg, 5)
 
 $btn-success-color ?=            #fff
 $btn-success-bg ?=               $brand-success
-$btn-success-border ?=           darken($btn-success-bg, 5%)
+$btn-success-border ?=           darken($btn-success-bg, 5)
 
 $btn-info-color ?=               #fff
 $btn-info-bg ?=                  $brand-info
-$btn-info-border ?=              darken($btn-info-bg, 5%)
+$btn-info-border ?=              darken($btn-info-bg, 5)
 
 $btn-warning-color ?=            #fff
 $btn-warning-bg ?=               $brand-warning
-$btn-warning-border ?=           darken($btn-warning-bg, 5%)
+$btn-warning-border ?=           darken($btn-warning-bg, 5)
 
 $btn-danger-color ?=             #fff
 $btn-danger-bg ?=                $brand-danger
-$btn-danger-border ?=            darken($btn-danger-bg, 5%)
+$btn-danger-border ?=            darken($btn-danger-bg, 5)
 
 $btn-link-disabled-color ?=      $gray-light
 
@@ -243,7 +243,7 @@ $dropdown-divider-bg ?=          #e5e5e5
 //** Dropdown link text color.
 $dropdown-link-color ?=          $gray-dark
 //** Hover color for dropdown links.
-$dropdown-link-hover-color ?=    darken($gray-dark, 5%)
+$dropdown-link-hover-color ?=    darken($gray-dark, 5)
 //** Hover background for dropdown links.
 $dropdown-link-hover-bg ?=       #f5f5f5
 
@@ -366,20 +366,20 @@ $navbar-collapse-max-height ?=     340px
 
 $navbar-default-color ?=           #777
 $navbar-default-bg ?=              #f8f8f8
-$navbar-default-border ?=          darken($navbar-default-bg, 6.5%)
+$navbar-default-border ?=          darken($navbar-default-bg, 6.5)
 
 // Navbar links
 $navbar-default-link-color ?=              #777
 $navbar-default-link-hover-color ?=        #333
 $navbar-default-link-hover-bg ?=           transparent
 $navbar-default-link-active-color ?=       #555
-$navbar-default-link-active-bg ?=          darken($navbar-default-bg, 6.5%)
+$navbar-default-link-active-bg ?=          darken($navbar-default-bg, 6.5)
 $navbar-default-link-disabled-color ?=     #ccc
 $navbar-default-link-disabled-bg ?=        transparent
 
 // Navbar brand label
 $navbar-default-brand-color ?=             $navbar-default-link-color
-$navbar-default-brand-hover-color ?=       darken($navbar-default-brand-color, 10%)
+$navbar-default-brand-hover-color ?=       darken($navbar-default-brand-color, 10)
 $navbar-default-brand-hover-bg ?=          transparent
 
 // Navbar toggle
@@ -390,16 +390,16 @@ $navbar-default-toggle-border-color ?=     #ddd
 
 //=== Inverted navbar
 // Reset inverted navbar basics
-$navbar-inverse-color ?=                    lighten($gray-light, 15%)
+$navbar-inverse-color ?=                    lighten($gray-light, 15)
 $navbar-inverse-bg ?=                       #222
-$navbar-inverse-border ?=                   darken($navbar-inverse-bg, 10%)
+$navbar-inverse-border ?=                   darken($navbar-inverse-bg, 10)
 
 // Inverted navbar links
-$navbar-inverse-link-color ?=               lighten($gray-light, 15%)
+$navbar-inverse-link-color ?=               lighten($gray-light, 15)
 $navbar-inverse-link-hover-color ?=         #fff
 $navbar-inverse-link-hover-bg ?=            transparent
 $navbar-inverse-link-active-color ?=        $navbar-inverse-link-hover-color
-$navbar-inverse-link-active-bg ?=           darken($navbar-inverse-bg, 10%)
+$navbar-inverse-link-active-bg ?=           darken($navbar-inverse-bg, 10)
 $navbar-inverse-link-disabled-color ?=      #444
 $navbar-inverse-link-disabled-bg ?=         transparent
 
@@ -498,19 +498,19 @@ $jumbotron-heading-font-size ?=  ceil($font-size-base * 4.5)
 
 $state-success-text ?=           #3c763d
 $state-success-bg ?=             #dff0d8
-$state-success-border ?=         darken(spin($state-success-bg, -10), 5%)
+$state-success-border ?=         darken(spin($state-success-bg, -10), 5)
 
 $state-info-text ?=              #31708f
 $state-info-bg ?=                #d9edf7
-$state-info-border ?=            darken(spin($state-info-bg, -10), 7%)
+$state-info-border ?=            darken(spin($state-info-bg, -10), 7)
 
 $state-warning-text ?=           #8a6d3b
 $state-warning-bg ?=             #fcf8e3
-$state-warning-border ?=         darken(spin($state-warning-bg, -10), 5%)
+$state-warning-border ?=         darken(spin($state-warning-bg, -10), 5)
 
 $state-danger-text ?=            #a94442
 $state-danger-bg ?=              #f2dede
-$state-danger-border ?=          darken(spin($state-danger-bg, -10), 5%)
+$state-danger-border ?=          darken(spin($state-danger-bg, -10), 5)
 
 
 //== Tooltips
@@ -545,7 +545,7 @@ $popover-border-color ?=              rgba(0, 0, 0, .2)
 $popover-fallback-border-color ?=     #ccc
 
 //** Popover title background color
-$popover-title-bg ?=                  darken($popover-bg, 3%)
+$popover-title-bg ?=                  darken($popover-bg, 3)
 
 //** Popover arrow width
 $popover-arrow-width ?=               10px
@@ -555,9 +555,9 @@ $popover-arrow-color ?=               $popover-bg
 //** Popover outer arrow width
 $popover-arrow-outer-width ?=         ($popover-arrow-width + 1)
 //** Popover outer arrow color
-$popover-arrow-outer-color ?=         fade-in($popover-border-color, 5%)
+$popover-arrow-outer-color ?=         fade-in($popover-border-color, 5)
 //** Popover outer arrow fallback color
-$popover-arrow-outer-fallback-color ?= darken($popover-fallback-border-color, 20%)
+$popover-arrow-outer-fallback-color ?= darken($popover-fallback-border-color, 20)
 
 
 //== Labels
@@ -684,7 +684,7 @@ $list-group-active-bg ?=        $component-active-bg
 //** Border color of active list elements
 $list-group-active-border ?=    $list-group-active-bg
 //** Text color for content within active list items
-$list-group-active-text-color ?= lighten($list-group-active-bg, 40%)
+$list-group-active-text-color ?= lighten($list-group-active-bg, 40)
 
 //** Text color of disabled list items
 $list-group-disabled-color ?=      $gray-light
@@ -761,7 +761,7 @@ $thumbnail-caption-padding ?= 9px
 //##
 
 $well-bg ?=                   #f5f5f5
-$well-border ?=               darken($well-bg, 7%)
+$well-border ?=               darken($well-bg, 7)
 
 
 //== Badges
