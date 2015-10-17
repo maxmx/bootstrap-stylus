@@ -6,9 +6,7 @@
 'use strict';
 
 module.exports = function(grunt) {
-
   grunt.initConfig({
-
     stylus: {
       options: {
         compress: false,

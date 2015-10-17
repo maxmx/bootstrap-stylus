@@ -3,11 +3,17 @@
   "description": "Port of the amazing Bootstrap 3.3.5 to Stylus",
   "repository": {
     "type": "git",
-    "url": "http://github.com/maxmx/bootstrap-stylus.git"
+    "url": "https://github.com/maxmx/bootstrap-stylus.git"
   },
   "keywords": [
     "bootstrap",
-    "stylus"
+    "stylus",
+    "css",
+    "mobile-first",
+    "responsive",
+    "front-end",
+    "framework",
+    "web"
   ],
   "version": "4.0.5",
   "devDependencies": {

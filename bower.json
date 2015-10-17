@@ -5,7 +5,6 @@
   "description": "A port of Bootstrap 3.3.5 to Stylus",
   "ignore": [
     "**/.*",
-    "node_modules",
-    "components"
+    "node_modules"
   ]
 }
