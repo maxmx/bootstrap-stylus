@@ -9,7 +9,7 @@
     "bootstrap",
     "stylus"
   ],
-  "version": "4.0.5",
+  "version": "5.0.5",
   "devDependencies": {
     "grunt": "~0.4.5",
     "stylus": "~0.47.0",
