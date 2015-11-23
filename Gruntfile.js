@@ -11,7 +11,7 @@ module.exports = function(grunt) {
   stylus: {
     options: {
       compress: false,
-      paths: ['stylus'],
+      paths: ['stylus', __dirname],
       urlfunc: 'embedurl', // use embedurl('test.png') in our code to trigger Data URI embedding
     },
     bootstrap: {

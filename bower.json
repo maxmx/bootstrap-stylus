@@ -1,6 +1,6 @@
 {
   "name": "bootstrap-stylus",
-  "version": "5.0.0",
+  "version": "5.0.1",
   "main": "bootstrap/index.styl",
   "description": "A port of Bootstrap 3.3.5 to Stylus",
   "ignore": [
