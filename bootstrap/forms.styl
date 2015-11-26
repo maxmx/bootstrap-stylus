@@ -122,6 +122,11 @@ output
   // Placeholder
   placeholder()
 
+  // Unstyle the caret on `<select>`s in IE10+.
+  &::-ms-expand
+    border: 0;
+    background-color: transparent;
+
   // Disabled and read-only inputs
   //
   // HTML5 says that controls under a fieldset > legend:first-child won't be

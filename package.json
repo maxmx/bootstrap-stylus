@@ -1,6 +1,6 @@
 {
   "name": "bootstrap-styl",
-  "description": "Port of the amazing Bootstrap 3.3.5 to Stylus",
+  "description": "Port of the amazing Bootstrap 3.3.6 to Stylus",
   "repository": {
     "type": "git",
     "url": "http://github.com/maxmx/bootstrap-stylus.git"
@@ -9,7 +9,7 @@
     "bootstrap",
     "stylus"
   ],
-  "version": "5.0.1",
+  "version": "5.0.2",
   "devDependencies": {
     "grunt": "~0.4.5",
     "stylus": "~0.47.0",
