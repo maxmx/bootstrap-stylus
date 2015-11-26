@@ -8,13 +8,13 @@ container-fixed($gutter = $grid-gutter-width)
   margin-left auto
   padding-left ($gutter / 2)
   padding-right ($gutter / 2)
-  @extend .clearfix
+  clearfix()
 
 // Creates a wrapper for a series of columns
 make-row($gutter = $grid-gutter-width)
   margin-left ceil($gutter / -2)
   margin-right floor($gutter / -2)
-  @extend .clearfix
+  clearfix()
 
 // Generate the extra small columns
 make-xs-column($columns, $gutter = $grid-gutter-width)
