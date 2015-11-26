@@ -101,7 +101,7 @@
   padding $modal-inner-padding
   text-align right // right align buttons
   border-top 1px solid $modal-footer-border-color
-  @extend .clearfix // clear it in case folks use .pull-* classes on buttons
+  clearfix() // clear it in case folks use .pull-* classes on buttons
 
   // Properly space out buttons
   .btn + .btn
