@@ -1,7 +1,7 @@
 Bootstrap Stylus 3.3.6
 ======================
 
-Port of the amazing [Bootstrap 3.3.6](https://github.com/twbs/bootstrap) to [Stylus 0.47.0](http://learnboost.github.com/stylus/).
+Port of the amazing [Bootstrap 3.3.6](https://github.com/twbs/bootstrap) to [Stylus 0.52.0](http://learnboost.github.com/stylus/).
 
 ## Installing
 
