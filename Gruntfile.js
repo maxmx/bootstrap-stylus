@@ -102,6 +102,27 @@ module.exports = function(grunt) {
     }
   },
 
+  jshint: {
+    options: {
+      reporter: require('jshint-stylish'),
+      expr: true
+    },
+    target: [
+      'js/transition.js',
+      'js/alert.js',
+      'js/button.js',
+      'js/carousel.js',
+      'js/collapse.js',
+      'js/dropdown.js',
+      'js/modal.js',
+      'js/tooltip.js',
+      'js/popover.js',
+      'js/scrollspy.js',
+      'js/tab.js',
+      'js/affix.js'
+    ]
+  },
+
   });
 
   // Load plugins here
@@ -109,9 +130,10 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-clean');
+  grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-uglify');
 
-  grunt.registerTask('dist', ['clean','stylus:bootstrap', 'cssmin:bootstrap', 'uglify']);
+  grunt.registerTask('dist', ['clean','stylus:bootstrap', 'cssmin:bootstrap', 'jshint', 'uglify']);
   grunt.registerTask('theme', ['stylus:theme', 'cssmin:theme']);
-  grunt.registerTask('build', ['clean','stylus:bootstrap', 'stylus:theme', 'cssmin:bootstrap', 'cssmin:theme', 'uglify']);
+  grunt.registerTask('build', ['clean','stylus:bootstrap', 'stylus:theme', 'cssmin:bootstrap', 'cssmin:theme', 'jshint', 'uglify']);
 };
