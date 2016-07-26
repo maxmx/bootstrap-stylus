@@ -9,7 +9,7 @@
     "bootstrap",
     "stylus"
   ],
-  "version": "5.0.6",
+  "version": "5.0.7",
   "devDependencies": {
     "grunt": "~1.0.1",
     "grunt-autoprefixer": "~3.0.4",
