@@ -88,6 +88,21 @@ $font-family-base ?= $font-family-serif
 this allows flexibility for easily updating to new bootstrap versions. See [?=](https://learnboost.github.io/stylus/docs/operators.html#conditional-assignment--).
 * You may select what javascript components you want by editing the uglify task in `gulpfile.js`. You can ommit components by removing them from the `uglify:dist:files` list.
 
+### Using with gulp
+
+To use with gulp, use bootstrap-stylus as a plugin.
+
+```
+var bootstrap = require('bootstrap-styl');
+var stylus = require('gulp-stylus');
+
+gulp.task('bootstrap', function(){
+    gulp.src('./your_code.styl')
+        .pipe(stylus({ use: bootstrap(), compress: true }))
+        .pipe(gulp.dest('./build'));
+});
+```
+
 ## Original Authors
 
 **Mark Otto**
