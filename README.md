@@ -90,7 +90,7 @@ this allows flexibility for easily updating to new bootstrap versions. See [?=](
 
 ### Using with gulp
 
-To use with gulp, use bootsrap-stylus as a plugin.
+To use with gulp, use bootstrap-stylus as a plugin.
 
 ```
 var bootstrap = require('bootstrap-styl');
