@@ -1,3 +1,5 @@
+// stylelint-disable selector-max-type, selector-max-compound-selectors, selector-max-combinators, selector-max-class, declaration-no-important, selector-no-qualifying-type
+
 //
 // Navbars
 // --------------------------------------------------
@@ -44,9 +46,9 @@
 // content for the user's viewport.
 
 .navbar-collapse
-  overflow-x visible
   padding-right $navbar-padding-horizontal
   padding-left $navbar-padding-horizontal
+  overflow-x visible
   border-top 1px solid transparent
   box-shadow inset 0 1px 0 rgba(255, 255, 255, .1)
   clearfix()
@@ -74,8 +76,8 @@
     .navbar-fixed-top &,
     .navbar-static-top &,
     .navbar-fixed-bottom &
-      padding-left 0
       padding-right 0
+      padding-left 0
 
 .navbar-fixed-top,
 .navbar-fixed-bottom
@@ -84,6 +86,25 @@
 
     @media (max-device-width $screen-xs-min) and (orientation landscape)
       max-height 200px
+
+  // Fix the top/bottom navbars when screen real estate supports it
+  position fixed
+  right 0
+  left 0
+  z-index $zindex-navbar-fixed
+
+  // Undo the rounded corners
+  @media (min-width $grid-float-breakpoint)
+    border-radius 0
+
+.navbar-fixed-top
+  top 0
+  border-width 0 0 1px
+
+.navbar-fixed-bottom
+  bottom 0
+  margin-bottom 0 // override .navbar defaults
+  border-width 1px 0 0
 
 
 // Both navbar header and collapse
@@ -116,36 +137,15 @@
   @media (min-width $grid-float-breakpoint)
     border-radius 0
 
-// Fix the top/bottom navbars when screen real estate supports it
-.navbar-fixed-top,
-.navbar-fixed-bottom
-  position fixed
-  right 0
-  left 0
-  z-index $zindex-navbar-fixed
-
-  // Undo the rounded corners
-  @media (min-width $grid-float-breakpoint)
-    border-radius 0
-
-.navbar-fixed-top
-  top 0
-  border-width 0 0 1px
-
-.navbar-fixed-bottom
-  bottom 0
-  margin-bottom 0 // override .navbar defaults
-  border-width 1px 0 0
-
 
 // Brand/project name
 
 .navbar-brand
   float left
+  height $navbar-height
   padding $navbar-padding-vertical $navbar-padding-horizontal
   font-size $font-size-large
   line-height $line-height-computed
-  height $navbar-height
 
   &:hover,
   &:focus
@@ -168,8 +168,8 @@
 .navbar-toggle
   position relative
   float right
-  margin-right $navbar-padding-horizontal
   padding 9px 10px
+  margin-right $navbar-padding-horizontal
   navbar-vertical-align(34px)
   background-color transparent
   background-image none // Reset unusual Firefox-on-Android default style see https://github.com/necolas/normalize.css/issues/214
@@ -244,9 +244,9 @@
 // our navbars.
 
 .navbar-form
-  margin-left (-($navbar-padding-horizontal))
-  margin-right (-($navbar-padding-horizontal))
   padding 10px $navbar-padding-horizontal
+  margin-right (-($navbar-padding-horizontal))
+  margin-left (-($navbar-padding-horizontal))
   border-top 1px solid transparent
   border-bottom 1px solid transparent
   box-shadow inset 0 1px 0 rgba(255, 255, 255, .1), 0 1px 0 rgba(255, 255, 255, .1)
@@ -267,11 +267,11 @@
   // Undo 100% width for pull classes
   @media (min-width $grid-float-breakpoint)
     width auto
-    border 0
-    margin-left 0
-    margin-right 0
     padding-top 0
     padding-bottom 0
+    margin-right 0
+    margin-left 0
+    border 0
     box-shadow none
 
 
@@ -310,8 +310,8 @@
 
   @media (min-width $grid-float-breakpoint)
     float left
-    margin-left $navbar-padding-horizontal
     margin-right $navbar-padding-horizontal
+    margin-left $navbar-padding-horizontal
 
 
 // Component alignment
@@ -376,28 +376,14 @@
         color $navbar-default-link-disabled-color
         background-color $navbar-default-link-disabled-bg
 
-  .navbar-toggle
-    border-color $navbar-default-toggle-border-color
-
-    &:hover,
-    &:focus
-      background-color $navbar-default-toggle-hover-bg
-    .icon-bar
-      background-color $navbar-default-toggle-icon-bar-bg
-
-  .navbar-collapse,
-  .navbar-form
-    border-color $navbar-default-border
-
-  // Dropdown menu items
-  .navbar-nav
+    // Dropdown menu items
     // Remove background color from open dropdown
     > .open > a
       &,
       &:hover,
       &:focus
-        background-color $navbar-default-link-active-bg
         color $navbar-default-link-active-color
+        background-color $navbar-default-link-active-bg
 
     @media (max-width $grid-float-breakpoint-max)
       // Dropdowns get custom display when collapsed
@@ -421,6 +407,18 @@
             color $navbar-default-link-disabled-color
             background-color $navbar-default-link-disabled-bg
 
+  .navbar-toggle
+    border-color $navbar-default-toggle-border-color
+
+    &:hover,
+    &:focus
+      background-color $navbar-default-toggle-hover-bg
+    .icon-bar
+      background-color $navbar-default-toggle-icon-bar-bg
+
+  .navbar-collapse,
+  .navbar-form
+    border-color $navbar-default-border
 
   // Links in navbars
   //
@@ -484,28 +482,13 @@
         color $navbar-inverse-link-disabled-color
         background-color $navbar-inverse-link-disabled-bg
 
-  // Darken the responsive nav toggle
-  .navbar-toggle
-    border-color $navbar-inverse-toggle-border-color
-
-    &:hover,
-    &:focus
-      background-color $navbar-inverse-toggle-hover-bg
-    .icon-bar
-      background-color $navbar-inverse-toggle-icon-bar-bg
-
-  .navbar-collapse,
-  .navbar-form
-    border-color darken($navbar-inverse-bg, 7)
-
-  // Dropdowns
-  .navbar-nav
+    // Dropdowns
     > .open > a
       &,
       &:hover,
       &:focus
-        background-color $navbar-inverse-link-active-bg
         color $navbar-inverse-link-active-color
+        background-color $navbar-inverse-link-active-bg
 
     @media (max-width $grid-float-breakpoint-max)
       // Dropdowns get custom display
@@ -536,6 +519,20 @@
           &:focus
             color $navbar-inverse-link-disabled-color
             background-color $navbar-inverse-link-disabled-bg
+
+  // Darken the responsive nav toggle
+  .navbar-toggle
+    border-color $navbar-inverse-toggle-border-color
+
+    &:hover,
+    &:focus
+      background-color $navbar-inverse-toggle-hover-bg
+    .icon-bar
+      background-color $navbar-inverse-toggle-icon-bar-bg
+
+  .navbar-collapse,
+  .navbar-form
+    border-color darken($navbar-inverse-bg, 7)
 
   .navbar-link
     color $navbar-inverse-link-color
