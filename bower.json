@@ -2,7 +2,7 @@
   "name": "bootstrap-stylus",
   "version": "5.0.6",
   "main": "bootstrap/index.styl",
-  "description": "A port of Bootstrap 3.3.7 to Stylus",
+  "description": "A port of Bootstrap 3.4.1 to Stylus",
   "ignore": [
     "**/.*",
     "node_modules",

@@ -1,3 +1,5 @@
+// stylelint-disable media-feature-name-no-unknown
+
 //
 // Carousel
 // --------------------------------------------------
@@ -9,12 +11,12 @@
 
 .carousel-inner
   position relative
-  overflow hidden
   width 100%
+  overflow hidden
 
   > .item
-    display none
     position relative
+    display none
     transition .6s ease-in-out left
 
     // Account for jankitude on images
@@ -84,15 +86,15 @@
 .carousel-control
   position absolute
   top 0
-  left 0
   bottom 0
+  left 0
   width $carousel-control-width
-  opacity-ie($carousel-control-opacity)
   font-size $carousel-control-font-size
   color $carousel-control-color
   text-align center
   text-shadow $carousel-text-shadow
   background-color rgba(0, 0, 0, 0) // Fix IE9 click-thru bug
+  opacity-ie($carousel-control-opacity)
   // We can't have this transition here because WebKit cancels the carousel
   // animation if you trip this while in the middle of another animation.
 
@@ -101,16 +103,16 @@
     gradient-horizontal(rgba(0, 0, 0, .5), rgba(0, 0, 0, .0001))
 
   &.right
-    left auto
     right 0
+    left auto
     gradient-horizontal(rgba(0, 0, 0, .0001), rgba(0, 0, 0, .5))
 
   // Hover/focus state
   &:hover,
   &:focus
-    outline 0
     color $carousel-control-color
     text-decoration none
+    outline 0
     opacity-ie(.9)
 
   // Toggles
@@ -120,9 +122,9 @@
   .glyphicon-chevron-right
     position absolute
     top 50%
-    margin-top -10px
     z-index 5
     display inline-block
+    margin-top -10px
 
   .icon-prev,
   .glyphicon-chevron-left
@@ -138,16 +140,16 @@
   .icon-next
     width 20px
     height 20px
-    line-height 1
     font-family serif
+    line-height 1
 
   .icon-prev
     &:before
-      content '\2039'// SINGLE LEFT-POINTING ANGLE QUOTATION MARK (U+2039)
+      content "\2039"// SINGLE LEFT-POINTING ANGLE QUOTATION MARK (U+2039)
 
   .icon-next
     &:before
-      content '\203a'// SINGLE RIGHT-POINTING ANGLE QUOTATION MARK (U+203A)
+      content "\203a"// SINGLE RIGHT-POINTING ANGLE QUOTATION MARK (U+203A)
 
 // Optional indicator pips
 //
@@ -160,10 +162,10 @@
   left 50%
   z-index 15
   width 60%
-  margin-left -30%
   padding-left 0
-  list-style none
+  margin-left -30%
   text-align center
+  list-style none
 
   li
     display inline-block
@@ -171,10 +173,7 @@
     height 10px
     margin 1px
     text-indent -999px
-    border 1px solid $carousel-indicator-border-color
-    border-radius 10px
     cursor pointer
-
     // IE8-9 hack for event handling
     //
     // Internet Explorer 8-9 does not support clicks on elements without a set
@@ -187,10 +186,13 @@
     background-color unquote('#000 \9') // IE8
     background-color rgba(0, 0, 0, 0) // IE9
 
+    border 1px solid $carousel-indicator-border-color
+    border-radius 10px
+
   .active
-    margin 0
     width 12px
     height 12px
+    margin 0
     background-color $carousel-indicator-active-bg
 
 // Optional captions
@@ -198,8 +200,8 @@
 // Hidden by default for smaller viewports
 .carousel-caption
   position absolute
-  left 15%
   right 15%
+  left 15%
   bottom 20px
   z-index 10
   padding-top 20px
@@ -235,8 +237,8 @@
 
   // Show and left align the captions
   .carousel-caption
-    left 20%
     right 20%
+    left 20%
     padding-bottom 30px
 
   // Move up the indicators
