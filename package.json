@@ -11,7 +11,7 @@
   ],
   "version": "5.0.9",
   "devDependencies": {
-    "grunt": "~1.0.1",
+    "grunt": "~1.5.2",
     "grunt-autoprefixer": "~3.0.4",
     "grunt-contrib-clean": "~1.0.0",
     "grunt-contrib-cssmin": "~1.0.0",
